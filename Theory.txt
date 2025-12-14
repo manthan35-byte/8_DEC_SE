@@ -1,0 +1,155 @@
+---------------------------------------------------------- Date:- 08/12/2025 --------------------------------------------------------------------------------------------
+
+** SDLC Methodology [Software Development life cycle] **
+    "
+        The SDLC referec to a Methodology with clearly defined processes for creating high-quality software in detail.
+        the SDLC Methodology focues on the following phases of Software Devlopment 
+    "
+    1. Requirement Gathering
+    2. Analysis
+    3. Designing
+    4. Implementation
+    5. Testing
+    6. Maintenance
+
+** Client & Server **
+
+[1] Client Program 
+    -> Running on end Host
+    -> Request Server 
+        e.g. Web browser
+
+[2] Server Program
+    -> Running on end host
+    -> Provides Services
+     e.g. Webserver
+
+ // Client - Server Communication //
+
+    [1] Client  - Sometimes on
+
+    -> Intilates a Request to the server when intersted.
+      e.g Web Browser on your laptop & cell phone
+    -> Dosen't Communication directly with other clients.
+    -> needs to know the servers address.
+
+    [2] Server - Always on 
+
+    -> Service requests from many host
+    ->  e.g. web server for the WWW.demo.com web site.
+    -> doesn't initiate contract with the clients.
+    -> needs a fixeed well know address.
+
+** HTTP :- Hyper Text transfer Protocol.
+        -> Which is mainly work as a waiter or delivery boy.
+        -> Which take request from client and send request to server.
+        -> reciver response from server and return back to client.
+
+   HTTPS :- Hyper Text transfer Protocol Secure.
+        -> Protocol :- in simple language we can say rule.
+    
+** Http Or https **
+
+    // Accepts // 
+
+        url
+        methods
+        header
+        body (Post - put) (registration - update)
+
+    // Response  from Server//
+
+        status code 
+        header
+        body (content)
+ 
+** WWW - "World Wide Web" **
+    -> know as a web
+    -> it is a collection of website or web pages stored in web servers.
+    -> connected to local computers throught the internal.
+    -> these website contain text pages, digital images, audio, videos, etc.
+    -> users can access the content of these site from any part of the world over the intement using their devices such as computer, laptop,phone, etc.
+    -> the www , along with internet enables the retrival and display of text & media to your device.
+
+** Type of Application Softwere ** 
+
+    -> Application Software -> Web / Mobile
+    -> System Software
+    -> Driver Software
+    -> middleware Software
+    -> Programimg Software
+
+---------------------------------------------------------- Date:- 12/12/2025 --------------------------------------------------------------------------------------------
+
+VERSION CONTROL SYSTEM : (VCS)
+
+    version CONTROL system mainly track user's record 
+    which can track all changes and we can go back to previous changes using of vcs 
+
+here we have one version control tool : git 
+
+git : open source version control software or tool 
+
+github : github is a version control hosting platform using of git we can push / pull 
+        data or records on github platform. 
+
+-----------------------------------------------
+steps to configure cli git - github 
+----------------------------------------------------
+(Apply below steps only 1st time at installation)
+    step 1 : install git 
+
+    step 2 : open git bash  (windows only)
+
+    step 3 : to check git's version 
+        #git --version 
+
+    step 4 : conifgure your github account with git 
+
+            in git bash perform below commands 
+
+            #git config --global user.name "username"
+            #git config --global user.email "emailaddress" 
+
+    step 5 : to check your configuration is done or not 
+
+            #git config --list   (you can check your name and email in that list )
+
+----------------------------------------------------
+==> Now, add any new repo on github 
+
+for the first time when you want to create "new repo" perform below commands 
+
+step 1 : login your github account in browser 
+            |
+            V 
+        go in repository 
+            |
+            V 
+        right side there is one button "new"
+            |
+            V 
+
+        create your repository "any name here"  -> click on create repository 
+
+step 2 : create same name folder in your system (local system)
+
+step 3 : open that new folder in your visual studio code 
+
+step 4 : peform below command to configure your local repo with cloud repository 
+
+        #git init 
+        
+        #git branch -M main    (to set your main branch)
+
+        #git remote add origin  "url from github repository" 
+
+step 5 : add and push your content (every time when you apply changes)
+
+        e.g.  create one file in your folder 
+
+        #git add . 
+
+        #git commit -m "message"
+
+        #git push -u origin main
