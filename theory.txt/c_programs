@@ -1,0 +1,43 @@
+pro  2 :
+
+// first program in c language
+#include <stdio.h>
+
+int main()
+{
+ printf("hello welcome to my first program");
+}
+ ---------------------------------------------------
+pro 2 : 
+// first program in c language
+#include <stdio.h>
+
+int main()
+{
+ printf("hello");
+ printf("/n welcome");
+ printf("/nc program");
+}
+
+------------------------------------------------
+
+pro 3 :
+//variable declaration,initlizatoin,calling example 
+#include<stdio.h>
+ void main()
+{
+   
+    /*here int is a datatype
+    here num is a variable */
+    int num;//step 1 : variable declaration
+    
+    num = 10;   //step 2 : variable initlizatoin
+    
+    printf("num=%d",num);//step 3 : variable calling 
+    
+    printf("\n%d+%d=%d",num,num,num+num);
+    
+    
+}
+
+

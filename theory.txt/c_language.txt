@@ -154,7 +154,7 @@ step 5 : add and push your content (every time when you apply changes)
 
         #git push -u origin main
 
- ----------------------------------------------------------------------------------       
+  
  
  -------------------------------------------------------------------------------------
 
@@ -297,5 +297,72 @@ void main ()
         this is represent block of code.
        */
 
---------------------------------------------------------------------------------
-4)
+--------------------------------19/12/2025------------------------------------------------
+printf() :
+
+   in c language  printf is a function which is used to
+   display message on output(console screen)
+syntax : 
+
+printf("message");
+
+; semocolon which is undicate end of the line 
+
+it is used to terminate statement
+ 
+by defualt printf function join with previous function 
+-----------------------------------------------------------
+escape sequence :
+ 
+\n :new line 
+\t :tab
+\' :to dispaly single quote
+\" :to dispaly single  duoble quote
+\\ :to display slash 
+ 
+ -----------------------------------------------------------
+
+datatype : which type of value store in a variable its calles datatype.
+
+1) numbers : 
+
+without point- int (integer) (%d)
+e.g. 15
+
+with point-float (%f),double (%lf),long double (%LF)
+e.g. 150.50
+
+2) character : 
+
+single char-char (%C)
+
+string-"hello"char[size](%s)
+
+3) yes/no : 
+
+bool (boolean)-true/false 
+
+---------------------------------------------------------------------------------------
+
+variable : 
+
+in c language we can take any name as a variable 
+
+but there are some f=rule we must follow 
+
+variable devided in 3 part :
+
+1)varible declaration :
+
+before use with variable we must have to declare with datatype.
+
+syntax: <datatype> variablename;
+
+2)variable initlization:
+
+assign a value 
+syntax:variablename = value;
+
+3)variable calling or variable use 
+
+syntax:printf(variablename)
