@@ -1,0 +1,43 @@
+USE CASE : Use case diagram which is represent user activity with system 
+
+    in this use case diagram there are 3 main sections 
+
+    1) actor : which is represent actor or user of the system 
+
+    2) activity:which is represent by oval symbol - which represent activity perform by 
+                respective user or actor 
+
+    3) system : system which is surrounded by reactangle boarders. 
+
+----------------------------------
+include : include which is indicate by << include >> like this 
+
+    which means which is mandotory to perform specific activity 
+
+extend : this is indicate by << extend >> 
+    which is optional . 
+
+-----------------------------------------------------------
+Flow chart diagram : 
+
+    flow chart diagram this is very important diagram of system planing
+
+    flow chart which represent system flow - step by step 
+
+    which is meainly represent that how system work step by step: 
+
+            e.g. 
+
+            step 1 
+            |
+            V
+            step 2 
+            ..
+
+    oval : this symbol which is represent starting point of flow chart. 
+
+    reactangle : which is represent process 
+
+    diamond : which is represent condition or decision  
+
+    arrow : which is use for connectors 

@@ -153,3 +153,149 @@ step 5 : add and push your content (every time when you apply changes)
         #git commit -m "message"
 
         #git push -u origin main
+
+ ----------------------------------------------------------------------------------       
+ 
+ -------------------------------------------------------------------------------------
+
+ what is language?
+
+ -------------------------------------------------------------------------------------
+
+ language is a way of communicate 
+
+ -------------------------------------------------------------------------------------
+
+ compiler : which is used to compile whole source file and gives output after completion of source file .
+
+ interpreret : it execute line by line 
+
+ line by line it send code to machine - and machine convert into human code and resend to user.
+
+ interpreter is slower then compiler
+ 
+
+--------------------------------------------------------------------------------------------------
+
+what is meaning of program ?
+
+program is a collection of lnstructoin code . 
+
+---------------------------------------------
+
+what is meaning of programing language ?
+
+a language which is used to write a program .
+
+---------------------------------------------------
+
+example of programing language ?
+
+c,c++,java,python,php,.net c#(c-sharp) ...
+
+------------------------------------------------
+
+what is c programin language ?
+
+c is most powerfull,popular compiler type language.
+c is easy to understand.
+c language was inveted by denis m. ritchie in at and a bell lab.
+
+-----------------------------------------------------------------------------------------------------
+
+history of c programing : 
+
+before c programin there is bcpl and b language and then c programing
+
+c language is batter version of b language .
+
+actully bcpl and b language working upon assembly language so, it difficult to understand so,denis m ritchie invented c programing in 1972.
+
+in 1989 ansi standerized of  c programing .
+
+ansi : american national standerd insitute.
+
+after standarized ofn c programing its known as a ansi c,c89.
+
+------------------------------------------------------------------------------
+
+features of c programing language : 
+
+c language is a easy to understand programing language-mother of all language.
+
+c contains laiberies
+
+----------------------------------------------------------------
+
+real world uses of c 
+
+operating system 
+games 
+kernals
+driver 
+embedded system
+
+=================================================================
+
+structure of program 
+1) documantation of program :
+ which represent yourr program's title or description 
+ which represent by comments
+
+ compiler skip or ignore comments :
+
+there are 2 type of comment :
+
+1)single line; which is represent //
+
+e.g.  
+ 
+    // this is single line comment //
+2) multi line : which represent by /*    */
+
+e.g.
+
+       /* this is 
+                 multiline 
+                          comment 
+
+                          */
+
+
+==============================================
+2)connection with c language libary 
+
+#include<stdio.h>
+#include<conio.h>
+
+here,  # : which is predefined 
+
+include : to add something
+
+<stdio.h> : standerd input output header file 
+
+     using of this header file we can access inbuilt function from this file 
+
+   <conio.h> : console input output header file.
+
+--------------------------------------------------------------------------------
+
+3)executation of program 
+
+void main ()
+{
+
+}
+
+   //here void is a data type which does not return value 
+
+            /*here,main is a functoin which is represent that this a main executable of function 
+
+{
+
+}
+        this is represent block of code.
+       */
+
+--------------------------------------------------------------------------------
+4)
