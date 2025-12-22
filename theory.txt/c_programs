@@ -40,4 +40,76 @@ pro 3 :
     
 }
 
+====================================================================
+pro 4 :
+
+#include <stdio.h>
+
+void main()
+{
+    int num;//variable declaration 
+    
+    printf("enter a number : ");
+    scanf("%d"&num);
+    printf("number =%d",num);
+    
+
+}
+===================================================================
+pro 5:
+#include <stdio.h>
+
+void main()
+{
+  float price; // variable declration 
+  
+  printf("enter price :");
+  scanf("%f",&price);
+  
+  printf("\n price = %f",price);
+  
+    
+
+}
+
+========================================================
+
+#include <stdio.h>
+
+void main()
+{
+  int num;
+  
+  
+  printf("enter  num : ");
+  scanf("%f",&num);
+  
+  printf("\n num = %f",num);
+  
+
+}
+ 
+================================================================
+void main()
+
+{
+    int num1;
+    int num2;
+    int num3;
+   
+    
+    printf("enter a number :");
+    scanf("%d",num1);
+    
+    printf("enter a number :");
+    scanf("%d",num2);
+    
+    printf("enter a number :");
+    scanf("%d",num3);
+    
+    
+    
+    printf(" \n %d,%d,%d",num1);
+}
+
 
