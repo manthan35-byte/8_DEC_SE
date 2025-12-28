@@ -235,7 +235,7 @@ kernals
 driver 
 embedded system
 
-=================================================================
+-----------------------------------------------------------------
 
 structure of program 
 1) documantation of program :
@@ -261,8 +261,8 @@ e.g.
 
                           */
 
+-----------------------------------------------------------------------
 
-==============================================
 2)connection with c language libary 
 
 #include<stdio.h>
@@ -402,7 +402,7 @@ like , + _ * and many more
 
 5) specialy charater : , ; [] () all these are speciall character 
 
-========================================================================================
+-------------------------------------------------------------------------------------
 
 variable rules : 
 
@@ -420,8 +420,7 @@ int num 1; x
 
 e.g. int int; x 
 
-===================================================================
-
+-------------------------------------------------------------------------
 printf(): to print value on output screen 
 
 scanf():n which i=mainly use for accept value at run time 
@@ -430,7 +429,7 @@ or simple language we can say that scanf use to read value.
 
 syntax: scanf(placeholder,variable);
 
-============================================================================
+---------------------------------------------------------------------------
 
 accept float value from user 
 
@@ -438,7 +437,7 @@ syntax:
 
 scanf("%f"&var);
 
-==========================================================================
+------------------------------------------------------------------------------
 
 operators: there is some specific symbol which is mainly used to perform operations 
 
@@ -452,3 +451,46 @@ to perform arithmatic opearations
 
 + _ * / %
 
+2)assignment operator :
+
+=
+
+to assign a value 
+
+shorthand opearator 
+    combination of arithmatic and assignment opearator
+    += -= *= /= %=
+    
+  3)relational operator :
+< > <= >= == !=
+
+4)logical opearator :
+&& [and operator]
+
+||   [or operator]
+
+!  [not operator]
+
+5)unity operator :
+
+this opearator divided in 2 part 
+
+postfix
+prefix 
+
+++[increment]
+--[decrement]
+
+6)bitwise operator :
+
+xor
+not
+or 
+left shift 
+right shift 
+
+7)conditional operator :
+
+exp1 ? exp2 ? : exp3 ?;
+
+?;

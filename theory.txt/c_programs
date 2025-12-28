@@ -1,4 +1,4 @@
-pro  2 :
+pro  1 :
 
 // first program in c language
 #include <stdio.h>
@@ -40,7 +40,7 @@ pro 3 :
     
 }
 
-====================================================================
+===================================================================
 pro 4 :
 
 #include <stdio.h>
@@ -50,46 +50,16 @@ void main()
     int num;//variable declaration 
     
     printf("enter a number : ");
-    scanf("%d"&num);
+    scanf("%d",&num);
     printf("number =%d",num);
     
 
 }
-===================================================================
-pro 5:
-#include <stdio.h>
-
-void main()
-{
-  float price; // variable declration 
-  
-  printf("enter price :");
-  scanf("%f",&price);
-  
-  printf("\n price = %f",price);
-  
-    
-
-}
-
-========================================================
-
-#include <stdio.h>
-
-void main()
-{
-  int num;
-  
-  
-  printf("enter  num : ");
-  scanf("%f",&num);
-  
-  printf("\n num = %f",num);
-  
-
-}
  
 ================================================================
+pro 5:
+
+include<stdio.h>
 void main()
 
 {
@@ -109,7 +79,158 @@ void main()
     
     
     
-    printf(" \n %d,%d,%d",num1);
+    printf(" \n %d,%d,%d",num1,num2,num3);
 }
 
+===================================================================
+pro 6:
+#include<stdio.h>
+void main()
+{
+  float marks;
+  printf("enter your marks");
+  scanf("%f",&marks);
 
+  printf("\n your marks =%f",marks);
+}
+
+=========================================================================
+pro 7:
+// accept book price from user and display on console screen
+
+#include<stdio.h>
+void main()
+
+{
+float book_price;
+
+printf("enter book price : ");
+scanf("%f",&book_price);
+
+printf("\n book price = %.2f",book_price);
+
+}
+
+========================================================================
+pro 8:
+#include<stdio.h>
+void main()
+{
+
+int a,b;
+a=10;
+b=5; 
+printf("\n a=%d,b=%d",a,b);
+a +=b;
+printf("\na=%d,b=%d",a,b);
+
+}
+
+========================================================================
+pro 9:
+//example of arithmatic operators
+#include<stdio.h>
+void main()
+{
+int a,b;
+a=10;
+b=5; 
+
+printf("%d + %d =%d",a,b,a+b);
+printf(" \n%d - %d =%d",a,b,a-b);
+printf(" \n%d * %d =%d",a,b,a*b);
+printf(" \n%d / %d =%d",a,b,a/b);
+printf(" \n%d %% %d =%d",a,b,a%b);
+}
+
+=====================================================================
+pro 10:
+// example of relational operators 
+#include<stdio.h>
+void main()
+{
+int num1,num2;
+num1=20;
+num2=35;
+
+int result=num1>num2;
+printf("%d",result);
+
+result=num1<num2;
+printf("\n%d",result);
+
+result=num1==num2;
+printf("\n%d",result);
+
+result=num1!=num2;
+printf("\n%d",result);
+}
+
+=================================================================
+pro 11:
+//example of logical operator
+#include<stdio.h>
+void main()
+{
+int num1,num2,num3;
+num1=20;
+num2=35;
+num3=40;
+
+int result=(num1>num2) && (num2>num1);
+printf("%d",result);
+
+result=(num3>num2) && (num2>num1);
+printf("\n%d",result);
+
+result=(num3>num2) || (num2<num1);
+printf("\n%d",result);
+
+
+}
+
+=============================================================================
+pro 12:
+//example of increment operator
+#include<stdio.h>
+void main()
+{
+int x=10;
+//postfix
+printf("x=%d",x);
+printf("\nx++=%d",++x);//example of postfix
+//prifix
+printf("\nx=%d",x);
+printf("\n++x=%d",++x);//example of prefix
+}
+
+====================================================================
+pro 13:
+//example of dencrement operator
+#include<stdio.h>
+void main()
+{
+int x=10;
+//postfix
+printf("x=%d",x);
+printf("\nx--=%d",x--);//example of postfix
+//prifix
+printf("\nx=%d",x);
+printf("\n--x=%d",--x);//example of prefix
+}
+=============================================================================
+pro 14:
+//ex of conditional operator
+#include<stdio.h>
+void main()
+{
+int num1,num2;
+
+num1=20;
+num2=40;
+
+//        exp1         exp2   exp3
+int max= (num1>num2) ? num1 : num2;
+printf("\nmax=%d",max);
+
+}
