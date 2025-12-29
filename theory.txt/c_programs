@@ -211,10 +211,8 @@ pro 13:
 void main()
 {
 int x=10;
-//postfix
 printf("x=%d",x);
 printf("\nx--=%d",x--);//example of postfix
-//prifix
 printf("\nx=%d",x);
 printf("\n--x=%d",--x);//example of prefix
 }
@@ -234,3 +232,56 @@ int max= (num1>num2) ? num1 : num2;
 printf("\nmax=%d",max);
 
 }
+==================================================================================
+pro 15:
+//enter number from user and cheak number is even or odd
+#include<stdio.h>
+void main()
+{
+//true means even
+int num1;
+printf("enter a number :");
+scanf("%d",&num1);
+
+printf("%d",num1%2==0);
+}
+=====================================================================================
+pro 16:
+//swap 2 number
+#include<stdio.h>
+void main()
+{
+    int a,b,c;
+    a=10;
+    b=20;
+    
+    printf("a=%d",a);
+    printf("\nb=%d",b);
+    
+    c=a;
+    a=b;
+    b=c;
+    printf("\na=%d",a);
+    printf("\nb=%d",b);
+}
+=================================================================================================
+pro 17:
+//find even and odd number
+#include<stdio.h>
+void main()
+{
+   int num;
+   printf("enter a number");
+   scanf("%d",&num);
+  if(num>0)
+  {
+    printf("\n %d num is positive",num);  
+  }
+  else
+  {
+    printf("\n %d num is negetive",num);  
+  }
+=====================================================================================================
+pro 18:
+
+  
