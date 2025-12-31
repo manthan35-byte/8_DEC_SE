@@ -281,7 +281,194 @@ void main()
   {
     printf("\n %d num is negetive",num);  
   }
+}
 =====================================================================================================
 pro 18:
+operator presidensy:::
+()  []
+*  / % (left to right)
++  -   (left to right)
+#include<stdio.h>
+void main()
+{
+  int a=10;
+  int b=5;
+  int c=3;
 
-  
+  int ans=a+b-c;
+  printf("\n ans=%d",ans);
+   
+  ans=a-b+c;
+    printf("\n ans=%d",ans);
+
+}  
+========================================================================================================
+pro 19:
+operator presidensy:::
+#include<stdio.h>
+void main()
+{
+  int ans;
+
+  ans=10+2*3;
+  printf("\n ans=%d",ans);
+
+  ans=10*5/2;
+  printf("\n ans=%d",ans);
+
+  #include<stdio.h>
+void main()
+{
+  int ans;
+
+  ans=10+2*3;
+  printf("\n ans=%d",ans);
+
+  ans=10+2+(30-3);
+  printf("\n ans=%d",ans);
+
+}
+
+}
+==========================================================================================================
+pro 20:
+//use of else if statement
+#include<stdio.h>
+void main()
+{
+int marks;
+printf("enter your value:");
+scanf("%d",&marks);
+
+if(marks<=100 && marks>=70)
+{
+    printf("a grade");
+}
+else if(marks>=60 && marks<70)
+{
+    printf("a grade");
+}
+else if(marks>=50 && marks<60)
+{
+    printf("b grade");
+}
+else if(marks>=40 && marks<50)
+{
+    printf("c grade");
+}
+else if(marks>=30 && marks<40)
+{
+    printf("d grade");
+}
+else 
+{
+    printf("fail");
+}
+}
+==============================================================
+pro 21:
+//example of nested if else
+#include<stdio.h>
+void main()
+{
+int marks;
+printf("enter your value:");
+scanf("%d",&marks);
+if (marks >=0 && marks<=100)
+{
+     if( marks>=70)
+    {
+        printf("a grade");
+    }
+    else if(marks>=60 && marks<70)
+    {
+        printf("a grade");
+    }
+    else if(marks>=50 && marks<60)
+    {
+        printf("b grade");
+    }
+    else if(marks>=40 && marks<50)
+    {
+        printf("c grade");
+    }
+    else if(marks>=30 && marks<40)
+    {
+        printf("d grade");
+    }
+    else 
+    {
+        printf("fail");
+    }
+}
+else
+{
+    printf("invaid marks");
+}
+}
+=================================================
+pro 22:
+#include<stdio.h>
+void main()
+{
+int num1,num2;
+
+printf("enter a number 1:");
+scanf("%d",&num1);
+
+printf("enter a number 2:");
+scanf("%d",&num2);
+
+
+if (num1>num2)
+{
+    printf("num1= %d is grater",num1);
+}
+else 
+{
+   printf("num1= %d is grater",num2);
+}
+}
+===================================================
+pro 23:
+//example of nested if else
+#include<stdio.h>
+void main()
+{
+int num1,num2,num3;
+
+printf("enter a number 1:");
+scanf("%d",&num1);
+
+printf("enter a number 2:");
+scanf("%d",&num2);
+
+printf("enter a number 3:");
+scanf("%d",&num3);
+
+if(num1>num2)
+{
+    if("num1>num3")
+    {
+        printf("\nnum1 is greater");
+    }
+    else 
+    {
+        printf("\nnum3 is greater");
+    }
+
+}
+else
+{
+    if(num2>num3)
+    {
+        printf("\nnum2 is grater");
+    }
+    else
+    {
+        printf("\nnum3 is grater");
+    }
+}
+}
+======================================================================
+

@@ -536,4 +536,42 @@ else
 }
 --------------------------------------------------------------------
 3)else if statement:
-//find even and odd number
+when we want to work with multiple if condition
+
+syntax:
+if(conditio)
+{
+    statement;
+}
+else if(condition)
+{
+    statement;
+}
+else if(condition)
+{
+    statement;
+}
+else
+{
+    false statement;
+}
+--------------------------------------------------------------------
+nested if statement :
+when if statement call inside the onother if statement
+
+syntax:
+if(condition)
+{
+    if(condition)
+    {
+    true statement;
+    }
+    else
+    {
+    false statement;
+    }
+}
+else
+{
+    false statement;
+}
