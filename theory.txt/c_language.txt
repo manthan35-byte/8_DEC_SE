@@ -205,7 +205,7 @@ c language was inveted by denis m. ritchie in at and a bell lab.
 
 history of c programing : 
 
-before c programin there is bcpl and b language and then c programing
+before c programing there is bcpl and b language and then c programing
 
 c language is batter version of b language .
 
@@ -574,4 +574,297 @@ if(condition)
 else
 {
     false statement;
+}
+-----------------------------------------------------------------------
+switch case:
+
+note:we can't use float data type.
+we can't use logical operators
+
+syntax:
+switch(expressoion)
+{
+    case value:
+    statement;
+    break;
+
+     case value:
+    statement;
+    break;
+
+    defualt:
+    statement;
+}
+============================================================================
+looping concept:
+
+there three types of loop:
+1)for loop 
+2)while loop 
+3)do while loop
+
+-----------------------------------------
+1)for loop:for loop is a sequence controlled loop 
+
+which is devidid in 3 counter
+
+syntax:
+for(counter1;counte2;counte3)
+{
+
+}
+
+syntax:
+for(initlization;condition;updatation)
+{
+
+}
+---------------------------------------------------
+2)while loop:
+
+    while loop is an entry controlled loop 
+
+    it cheak condition at entry level and if condition goes true loop will execute.
+
+syntax:
+
+        initlization;
+        while(condition)
+        {
+            statement;
+            updation;
+        }
+------------------------------------------------------------
+nested for loop:
+
+when loop inside the onther loop 
+
+syntax:
+
+for(initlization;condition;updatation)
+{
+    for(initlization;condition;updatation)
+    {
+        printf("");
+    }
+}
+------------------------------------------------------------
+//square using nested loop
+#include <stdio.h>
+int main()
+{
+  int row;
+  int col;
+  
+  for(row=1;row<=5;row++)
+  {
+     
+      for(col=1;col<=5;col++)
+      {
+          printf("*");
+      }
+      printf("\n");
+  }
+}
+------------------------------------------------------------
+#include <stdio.h>
+int main()
+{
+  int row;
+  int col;
+  
+  for(row=1;row<=5;row++)
+  {
+     
+      for(col=1;col<=5;col++)
+      {
+          if(row==3 && col==3)
+          {
+              printf("&");
+          }
+          else
+          {
+              printf("*");
+          }
+      }
+      printf("\n");
+  }
+}
+------------------------------------------------------------
+#include <stdio.h>
+int main()
+{
+  int row;
+  int col;
+  
+  for(row=1;row<=5;row++)
+  {
+     
+      for(col=1;col<=row;col++)
+      {
+          printf("*");
+      }
+      printf("\n");
+  }
+}
+------------------------------------------------------------
+#include <stdio.h>
+int main()
+{
+  int row;
+  int col;
+  
+  for(row=1;row<=5;row++)
+  {
+     
+      for(col=1;col<=row;col++)
+      {
+          printf("%d",row);
+      }
+      printf("\n");
+  }
+}
+-----------------------------------------------------------
+#include <stdio.h>
+int main()
+{
+  int row;
+  int col;
+  
+  for(row=1;row<=5;row++)
+  {
+     
+      for(col=1;col<=row;col++)
+      {
+          printf("%d",col);
+      }
+      printf("\n");
+  }
+}
+---------------------------------------------------
+#include <stdio.h>
+int main()
+{
+  int row;
+  int col;
+  int num=1;
+  for(row=1;row<=4;row++)
+  {
+     
+      for(col=1;col<=row;col++)
+      {
+          printf("%d ",num);
+          num++;
+      }
+      printf("\n");
+  }
+}
+------------------------------------------------
+#include <stdio.h>
+int main()
+{
+  // display char value 
+  // ascii : american standard code information for interchange
+  
+  int num=65;
+  printf("%c",num);
+}
+-------------------------------------------------------------------
+#include <stdio.h>
+int main()
+{
+    int num=65;
+    int r;
+    
+    for(r=1;r<=26;r++)
+    {
+        printf("%c",num);
+        num++;
+    }
+}
+----------------------------------------------------------------------
+do while loop:
+
+do while loop is an exit control loop - it cheak condition at exit level
+
+so,there are at least 1 possiblity of that it execute 1 time if condition goes false.
+
+syntax:
+
+initlization
+do
+{
+statement;
+updatation;
+}while(condition);
+==============================================================================
+function : function is  a most powerfull topic of any programing language 
+function provides reuseablitiy
+
+using functionwe can reduce our code.
+
+using function we can call code as per our need.
+
+so,we can save or developement time.
+
+there are  2 types of function
+
+1)in built function: which is predefined by c language 
+
+    e.g. printf(),scanf(),getch().....
+
+2)user define function: that functioncreated as user need. 
+
+-------------------------------------------------------------------------
+=> how to create function
+
+syntax:
+step 1: function declaration
+   <returntype>  funname()
+  
+step 2:function defination :add main block of code 
+
+ <returntype>  funname()
+ {
+    //block of code
+   }
+step 3:function calling : use of function
+
+syntax:
+
+funnname();
+
+---------------------------------------------------------------------
+1)function without perametersm and function without return value.
+
+syntax:
+
+void funname()
+{
+
+}
+----------------------------------------------------------------------
+2)function with perametersm and function without return value.
+
+
+syntax:
+
+void  funname(perameters,perameters....)
+{
+
+}
+---------------------------------------------------------------------
+3)function without perametersm and function with return value.
+
+syntacx:
+void funname()
+{
+    return value;
+}
+----------------------------------------------------------------------
+4)function without perametersm and function without return value.
+syntacx:
+void funname(perameters)
+{
+    return value;
 }

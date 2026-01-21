@@ -7,7 +7,7 @@ int main()
 {
  printf("hello welcome to my first program");
 }
- ---------------------------------------------------
+====================================================================
 pro 2 : 
 // first program in c language
 #include <stdio.h>
@@ -16,11 +16,10 @@ int main()
 {
  printf("hello");
  printf("/n welcome");
- printf("/nc program");
+ printf("/n program");
 }
 
-------------------------------------------------
-
+====================================================================
 pro 3 :
 //variable declaration,initlizatoin,calling example 
 #include<stdio.h>
@@ -39,8 +38,7 @@ pro 3 :
     
     
 }
-
-===================================================================
+====================================================================
 pro 4 :
 
 #include <stdio.h>
@@ -48,18 +46,15 @@ pro 4 :
 void main()
 {
     int num;//variable declaration 
-    
+   
     printf("enter a number : ");
     scanf("%d",&num);
     printf("number =%d",num);
-    
-
 }
- 
-================================================================
+====================================================================
 pro 5:
 
-include<stdio.h>
+#include<stdio.h>
 void main()
 
 {
@@ -82,7 +77,7 @@ void main()
     printf(" \n %d,%d,%d",num1,num2,num3);
 }
 
-===================================================================
+====================================================================
 pro 6:
 #include<stdio.h>
 void main()
@@ -94,7 +89,7 @@ void main()
   printf("\n your marks =%f",marks);
 }
 
-=========================================================================
+======================================================================
 pro 7:
 // accept book price from user and display on console screen
 
@@ -470,5 +465,599 @@ else
     }
 }
 }
-======================================================================
+=====================================================================
+pro 24:
+#include<stdio.h>
+void main()
+{
+int day;
+printf("enter a day:");
+scanf("%d",&day);
+
+switch(day)
+{
+    case 1:
+    printf("monday");
+    break;
+    
+    case 2:
+    printf("tuesday");
+    break;
+    
+    case 3:
+    printf("wednesday");
+    break;
+    
+    default:
+    printf("invalid day");
+}
+}
+===============================================================================
+#include<stdio.h>
+void main()
+{
+char char_value;
+printf("enter a char:");
+scanf("%c",&char_value);
+
+switch(char_value)
+{
+    case 'a':
+    case 'e':
+    case 'o':
+    case 'i':
+    case 'u':
+    printf("a vowel");
+    break;
+    
+    default:
+    printf("not a vowel");
+}
+}
+===========================================================================
+#include<stdio.h>
+void main()
+{
+char char_value;
+printf("enter a char:");
+scanf("%c",&char_value);
+
+switch(char_value)
+{
+    case 'a';
+    case 'e';34
+    case 'o';
+    case 'i';
+    case 'u';
+    printf("a vowel");
+    break;
+    
+    default:
+    printf("not a vowel");
+}
+}
+============================================================================
+#include<stdio.h>
+void main()
+{
+    int i;
+    int a,b,ans;
+    printf("enter a starting number:");
+    scanf("%d",&a);
+    
+    printf("enter a ending number");
+    scanf("%d",&b);
+    
+    for(i=a;i<=b;i++)
+    {
+        printf("\n %d",i);
+    }
+}
+==================================================================================
+#include<stdio.h>
+void main()
+{
+
+    int i;
+    int n;
+    
+    
+    for(i=1;i<=5;i++)
+    {
+        printf("enter a number:");
+        scanf("%d",&n);
+    }
+}
+=================================================================================
+#include<stdio.h>
+void main()
+{
+    int i;
+    char char_c;
+    
+    for(i=1;i<=7;i++)
+    {
+        printf(" \n enter a character %d :",i);
+        scanf("%c",&char_c);
+        getchar();
+    }
+}
+==================================================================
+#include<stdio.h>
+void main()
+{
+    int i;
+    
+    i=1;
+    while(i<=5)
+    {
+        printf("\t %d",i);
+        i++;
+    }
+}
+===============================================================================
+#include<stdio.h>
+#include<stdbool.h>
+void main()
+{
+bool flag=true;
+int num;
+
+char choice;
+while(flag)
+{
+    printf("enter a number :");
+    scanf("%d",&num);
+    
+    printf("do you want to continue press 'y' for yes press 'n' for no :");
+    scanf(" %c",&choice);
+    
+    {
+        if(choice=='y')
+        {
+            flag = true;
+        
+        }
+        else
+        {
+            flag = false;
+        }
+    }
+}
+}
+============================================================================
+#include<stdio.h>
+#include<stdbool.h>
+void main()
+{
+
+int num;
+int sum=0;
+char choice;
+bool status=true;
+
+while(status)
+{
+    printf("enter a number : ");
+    scanf("%d",&num);
+    
+    printf("do you want to continue press y for yes : ");
+    scanf(" %c",&choice);
+    
+    if(choice=='n')
+    {
+        status=false;
+    }
+    sum+=num;
+}
+printf("\n total %d",sum);
+}
+==================================================
+#include<stdio.h>
+#include<stdbool.h>
+void main()
+{
+    int f=1;
+    int i;
+    int num;
+    
+    printf("enter a number :");
+    scanf("%d",&num);
+    
+    for(i=1;i<=num;i++)
+    {
+        f *=i;
+    }
+    printf("\n factorial = %d",f);
+}
+==================================================
+//nested for loop
+#include <stdio.h>
+
+
+
+int main()
+{
+  int row;
+  int col;
+  
+  for(row=1;row<=5;row++)
+  {
+      printf(" \n %d",row);
+      for(col=1;col<=3;col++)
+      {
+          printf("#");
+      }
+  }
+}
+==============================================
+#include<stdio.h>
+int main()
+{
+    int i;
+    for(i=1;i<30;i++)
+    {
+        if(i==25)
+        {
+            break;
+        }
+        if(i%2==0)
+        {
+      printf(" \n %d ",i);
+    }
+===============================================
+#include<stdio.h>
+int main()
+{
+    int choice=3;
+    do{
+        printf("1.withdraw \n");
+        printf("2.cheak balaence \n");
+        printf("3.exit");
+        printf("choose an option ");
+        scanf("%d",&choice);
+    }
+    while(choice<3 && choice>0);
+}
+==================================================
+#include <stdio.h>
+
+int main()
+{
+    int choice;
+    while(choice!=3){
+        continue;
+        printf("%d",choice);
+       choice++;
+    }
+}
+===================================================================
+#include <stdio.h>
+
+int main()
+{
+    int row,col;
+    for(row=1;row<5;rpw++)
+    {
+     for(col=1;col<=row;col++)
+     {
+         printf("*");
+     }
+     printf("\n");
+    }
+    for(row=5;row>=1;row--)
+    {
+        for(col=1;col<=row;col++)
+        {
+            printf("*");
+        }
+        printf("\n");
+    }
+}
+=====================================================================
+#include <stdio.h>
+
+int main()
+{
+    int i;
+    do
+    {
+        printf("\n %d",i);
+        i++;
+    }while(i<=5);
+    
+}
+========================================================================
+#include <stdio.h>
+
+int main()
+{
+    int i=6;
+    do
+    {
+        printf("\n %d",i);
+        i++;
+    }while(i<=5);
+    
+}
+==========================================================================
+#include<stdio.h>
+//step 1 : function declaration
+
+void myfun();//function declaration
+void main()
+{
+    printf("\n this is function example\n");
+    //step 3:function calling
+    mufun(); 
+}
+// step 2 : function define
+void myfun()
+{
+    printf("\nhello");
+    printf("example of function ");
+}
+===============================================================
+
+#include <stdio.h>
+
+void add();
+void mul();
+void division();
+void sub();
+void main()
+{
+int choice;
+
+printf("\n menu ::");
+printf("\n press 1 for addition");
+printf("\n press 2 for multiplication");
+printf("\n press 1 for division");
+printf("\n press 1 for substraction");
+
+printf("\n enter your choice");
+scanf("%d",&choice);
+
+switch(choice)
+{
+   case 1:
+   add();
+   break;
+   
+   case 2:
+   mul();
+   break;
+    case 3:
+   division();
+   break;
+    case 4:
+   sub();
+   break;
+  
+}
+void add()
+{
+    int num1,num2;
+    printf("enter number 1 :");
+    scanf("%d",&num1);
+    
+    printf("enter number 2 :");
+    scanf("%d",&num2);
+    
+    int ans=num1+num2;
+    printf("\n ans=%d",ans);
+}
+void mul()
+{
+    int num1,num2;
+    printf("enter number 1 :");
+    scanf("%d",&num1);
+    
+    printf("enter number 2 :");
+    scanf("%d",&num2);
+    
+    int ans=num1*num2;
+    printf("\n ans=%d",ans);
+}
+void division()
+{
+    int num1,num2;
+    printf("enter number 1 :");
+    scanf("%d",&num1);
+    
+    printf("enter number 2 :");
+    scanf("%d",&num2);
+    
+    int ans=num1/num2;
+    printf("\n ans=%d",ans);
+}
+void sub()
+{
+    int num1,num2;
+    printf("enter number 1 :");
+    scanf("%d",&num1);
+    
+    printf("enter number 2 :");
+    scanf("%d",&num2);
+    
+    int ans=num1-num2;
+    printf("\n ans=%d",ans);
+}
+
+}
+==================================================================
+#include<stdio.h>
+#include<stdbool.h>
+void votting();
+void even_odd();
+void po_ne();
+void main()
+{
+    bool t=true;
+    char ch;
+    int choice;
+    printf("\n\n----------------<MENU>-----------------\n\n");
+    printf("\nPress 1 for check entered user is eligible for voting or not.");
+    printf("\nPress 2 for chek entered number is even or odd.");
+    printf("\nPress 3 for chek entered number is positive or negative.");
+    while(t)
+    {
+        
+        printf("\n\nfor continue press (y) or press (n):");
+        scanf(" %c",&ch);
+     
+     if (ch=='n'||ch=='N')
+     {
+         break;
+     }
+     else if(ch=='y'||ch=='Y')
+     {
+         t=true;
+     }
+     else
+     {
+         printf("!!!!!press right character!!!!!");continue;
+     }
+    
+        printf("\n\nEnter a choice:");
+        scanf("%d",&choice);
+        switch(choice)
+        {
+            case 1:
+            votting();break;
+            case 2:
+            even_odd();break;
+            case 3:
+            po_ne();break;
+            
+            
+        }
+    }
+    
+}
+void votting()
+{
+    int vo;
+    printf("\nEnter a age:");
+    scanf("%d",&vo);
+    if(vo>=18)
+    {
+        printf("****Eligible****");
+    }
+    else
+    {
+        printf("_____Not Eligible____");
+    }
+}
+void even_odd()
+{
+    int ev;
+    printf("\nEnter a number:");
+    scanf("%d",&ev);
+    if(ev%2==0)
+    {
+        printf("****Even number****");
+    }
+    else
+    {
+        printf("____odd number____");
+    }
+}
+void po_ne()
+{
+    int pn;
+    printf("\nEnter a number:");
+    scanf("%d",&pn);
+    if(pn>0)
+    {
+        printf("****Positive number****");
+        
+    }
+    else
+    {
+        printf("____negative number____");
+    }
+}
+====================================================================
+#include <stdio.h>
+void add(int num1,int num2);
+int main()
+{
+    int n1,n2;
+    
+printf("enter number 1 :");
+   scanf("%d",&n1);
+    
+    printf("enter number 2 :");
+   scanf("%d",&n2);
+   
+   add(n1,n2);
+}
+
+void add(int num1,int num2)
+{
+    int ans;
+    printf("\n ans=%d",num1+num2);
+}
+===========================================================
+// function with return value
+#include <stdio.h>
+int sum()
+{
+    int num1,num2;
+    int ans;
+    printf("enter a number 1 :");
+    scanf("%d",&num1);
+    printf("enter a number 2 :");
+    scanf("%d",&num2);
+    ans=num1+num2;
+    return ans;
+}
+int main()
+{
+    int res;
+    res=sum();
+    printf("\n res=%d",res);
+}
+==== ========================================================
+// function with return value and function with perameters
+#include <stdio.h>
+int sum(int a,int b)
+{
+    return a+b;
+}
+int main()
+{
+  int num1,num2,ans;
+  printf("enter number 1 :");
+  scanf("%d",&num1);
+  printf("enter number 2 :");
+  scanf("%d",&num2);
+  
+  ans=sum(num1,num2);
+  printf("\n ans =%d",ans);
+}
+=======================================================
+#include <stdio.h>
+int findf(int num)
+{
+   int f=1,i;
+   for(i=1;i<=num;i++)
+   {
+       f*=i;
+   }
+   return f;
+}
+int main()
+{
+ int number; 
+ int res;
+ 
+ printf("enter a number which you want to find factorial :");
+ scanf("%d",&number);
+ 
+ res=findf(number);
+ printf("\n res = %d",res);
+}
+
 
