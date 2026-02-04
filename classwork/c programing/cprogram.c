@@ -119,7 +119,6 @@ printf(" \n%d * %d =%d",a,b,a*b);
 printf(" \n%d / %d =%d",a,b,a/b);
 printf(" \n%d %% %d =%d",a,b,a%b);
 }
-
 =====================================================================
 pro 10:
 // example of relational operators 

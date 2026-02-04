@@ -11,21 +11,22 @@ there are mainly 2 types of array :
 2d array,3d array 
 
 [][];[][][]
-==========================
-ex:
+-  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -
+ex 1:
 #include <stdio.h>
-
 int main()
 {
+
    int a[2][3]={
        {10,20,30},
        {40,50,60}
        
    };
    
-    printf("\n %d"a,[0][0]); 
+    printf("\n %d",a[0][0]); 
     return 0;
-}   
+} 
+-  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  
 ex2:
 #include <stdio.h>
 
@@ -41,14 +42,15 @@ int main()
     
     for(row=0;row<2;row++)
     {
-        for(col=0;col,3;col++)
+        for(col=0;col<3;col++)
         {
-            printf("%d",a[row][col]);
+            printf("\n%d",a[row][col]);
         }
         printf("\n");
     }
     return 0;
 }
+-  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -
 ex3 :
 #include <stdio.h>
 
@@ -68,7 +70,8 @@ int main()
   }
   return 0;
 }  
-
+-  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -
+/*
 ascending array:
 or 
 sorting array:
@@ -85,9 +88,11 @@ if
 tem=a[0]
 a[0]=a[1]
 a[1]=a[0]
+*/
+-  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -
 ex 4:
-#include <stdio.h>
 //most imp program
+#include <stdio.h>
 int main()
 {
   int a[5]={23,4,7,2,9};
@@ -107,13 +112,14 @@ int main()
   }
   for(i=0;i<5;i++)
   {
-      printf("%d",a[i]);
+      printf("\n%d",a[i]);
   }
   return 0;
-}  
+} 
+-  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  - 
 ex5:
-#include <stdio.h>
 //most imp program
+#include <stdio.h>
 int main()
 {
   char str[10]="india";
@@ -129,4 +135,4 @@ int main()
   }
   
   return 0;
-} 
+}
