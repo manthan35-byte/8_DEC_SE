@@ -25,7 +25,7 @@ int main()
    
     printf("\n %d"a,[0][0]); 
     return 0;
-}  
+}   
 ex2:
 #include <stdio.h>
 
@@ -129,4 +129,4 @@ int main()
   }
   
   return 0;
-}  
+} 
