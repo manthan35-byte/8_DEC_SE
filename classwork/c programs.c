@@ -1,58 +1,41 @@
 pro  1 :
-
-// first program in c language
+//first program of c language
 #include <stdio.h>
 
 int main()
 {
- printf("hello welcome to my first program");
-}
-====================================================================
-pro 2 : 
-// first program in c language
-#include <stdio.h>
-
-int main()
-{
- printf("hello");
- printf("/n welcome");
- printf("/n program");
+    printf("Hello, welcome to my first program");
+    return 0;
 }
 
 ====================================================================
-pro 3 :
+pro 2 :
 //variable declaration,initlizatoin,calling example 
 #include<stdio.h>
  void main()
 {
-   
-    /*here int is a datatype
-    here num is a variable */
+
     int num;//step 1 : variable declaration
-    
     num = 10;   //step 2 : variable initlizatoin
-    
     printf("num=%d",num);//step 3 : variable calling 
-    
     printf("\n%d+%d=%d",num,num,num+num);
-    
     
 }
 ====================================================================
-pro 4 :
+pro 3 :
 
 #include <stdio.h>
-
 void main()
 {
-    int num;//variable declaration 
-   
+
+    int num;//variable declaration   
     printf("enter a number : ");
     scanf("%d",&num);
     printf("number =%d",num);
+
 }
 ====================================================================
-pro 5:
+pro 4 :
 
 #include<stdio.h>
 void main()
@@ -60,25 +43,22 @@ void main()
 {
     int num1;
     int num2;
-    int num3;
-   
+    int num3; 
     
     printf("enter a number :");
-    scanf("%d",num1);
+    scanf("%d",&num1);
     
     printf("enter a number :");
-    scanf("%d",num2);
+    scanf("%d",&num2);
     
     printf("enter a number :");
-    scanf("%d",num3);
-    
-    
-    
-    printf(" \n %d,%d,%d",num1,num2,num3);
-}
+    scanf("%d",&num3);
+      
+    printf(" \n %d",num1+num2+num3);
 
+}
 ====================================================================
-pro 6:
+pro 5:
 #include<stdio.h>
 void main()
 {
@@ -90,9 +70,9 @@ void main()
 }
 
 ======================================================================
-pro 7:
-// accept book price from user and display on console screen
+pro 6:
 
+// accept book price from user and display on console screen
 #include<stdio.h>
 void main()
 
@@ -105,24 +85,26 @@ scanf("%f",&book_price);
 printf("\n book price = %.2f",book_price);
 
 }
-
 ========================================================================
-pro 8:
+pro 7:
+
 #include<stdio.h>
 void main()
 {
 
 int a,b;
+
 a=10;
 b=5; 
 printf("\n a=%d,b=%d",a,b);
 a +=b;
+
 printf("\na=%d,b=%d",a,b);
 
 }
 
 ========================================================================
-pro 9:
+pro 8:
 //example of arithmatic operators
 #include<stdio.h>
 void main()
@@ -160,7 +142,6 @@ printf("\n%d",result);
 result=num1!=num2;
 printf("\n%d",result);
 }
-
 =================================================================
 pro 11:
 //example of logical operator
@@ -180,10 +161,7 @@ printf("\n%d",result);
 
 result=(num3>num2) || (num2<num1);
 printf("\n%d",result);
-
-
 }
-
 =============================================================================
 pro 12:
 //example of increment operator
@@ -198,7 +176,6 @@ printf("\nx++=%d",++x);//example of postfix
 printf("\nx=%d",x);
 printf("\n++x=%d",++x);//example of prefix
 }
-
 ====================================================================
 pro 13:
 //example of dencrement operator
@@ -218,14 +195,11 @@ pro 14:
 void main()
 {
 int num1,num2;
-
 num1=20;
 num2=40;
-
 //        exp1         exp2   exp3
 int max= (num1>num2) ? num1 : num2;
 printf("\nmax=%d",max);
-
 }
 ==================================================================================
 pro 15:
@@ -237,7 +211,6 @@ void main()
 int num1;
 printf("enter a number :");
 scanf("%d",&num1);
-
 printf("%d",num1%2==0);
 }
 =====================================================================================
@@ -279,10 +252,12 @@ void main()
 }
 =====================================================================================================
 pro 18:
+/*
 operator presidensy:::
 ()  []
 *  / % (left to right)
 +  -   (left to right)
+*/
 #include<stdio.h>
 void main()
 {
@@ -294,45 +269,17 @@ void main()
   printf("\n ans=%d",ans);
    
   ans=a-b+c;
-    printf("\n ans=%d",ans);
+  printf("\n ans=%d",ans);
 
-}  
+}
 ========================================================================================================
 pro 19:
-operator presidensy:::
-#include<stdio.h>
-void main()
-{
-  int ans;
-
-  ans=10+2*3;
-  printf("\n ans=%d",ans);
-
-  ans=10*5/2;
-  printf("\n ans=%d",ans);
-
-  #include<stdio.h>
-void main()
-{
-  int ans;
-
-  ans=10+2*3;
-  printf("\n ans=%d",ans);
-
-  ans=10+2+(30-3);
-  printf("\n ans=%d",ans);
-
-}
-
-}
-==========================================================================================================
-pro 20:
 //use of else if statement
 #include<stdio.h>
 void main()
 {
 int marks;
-printf("enter your value:");
+printf("enter your marks:");
 scanf("%d",&marks);
 
 if(marks<=100 && marks>=70)
@@ -341,19 +288,19 @@ if(marks<=100 && marks>=70)
 }
 else if(marks>=60 && marks<70)
 {
-    printf("a grade");
+    printf("b grade");
 }
 else if(marks>=50 && marks<60)
 {
-    printf("b grade");
+    printf("c grade");
 }
 else if(marks>=40 && marks<50)
 {
-    printf("c grade");
+    printf("d grade");
 }
 else if(marks>=30 && marks<40)
 {
-    printf("d grade");
+    printf("e grade");
 }
 else 
 {
@@ -361,7 +308,7 @@ else
 }
 }
 ==============================================================
-pro 21:
+pro 20:
 //example of nested if else
 #include<stdio.h>
 void main()
@@ -402,7 +349,7 @@ else
 }
 }
 =================================================
-pro 22:
+pro 21:
 #include<stdio.h>
 void main()
 {
@@ -414,18 +361,18 @@ scanf("%d",&num1);
 printf("enter a number 2:");
 scanf("%d",&num2);
 
-
 if (num1>num2)
 {
     printf("num1= %d is grater",num1);
 }
 else 
 {
-   printf("num1= %d is grater",num2);
-}
+   printf("num2= %d is grater",num2);
+} 
+
 }
 ===================================================
-pro 23:
+pro 22:
 //example of nested if else
 #include<stdio.h>
 void main()
@@ -443,7 +390,7 @@ scanf("%d",&num3);
 
 if(num1>num2)
 {
-    if("num1>num3")
+    if(num1>num3)
     {
         printf("\nnum1 is greater");
     }
@@ -451,7 +398,6 @@ if(num1>num2)
     {
         printf("\nnum3 is greater");
     }
-
 }
 else
 {
@@ -466,7 +412,7 @@ else
 }
 }
 =====================================================================
-pro 24:
+pro 23:
 #include<stdio.h>
 void main()
 {
@@ -493,6 +439,7 @@ switch(day)
 }
 }
 ===============================================================================
+pro 24:
 #include<stdio.h>
 void main()
 {
@@ -515,28 +462,32 @@ switch(char_value)
 }
 }
 ===========================================================================
+pro 25:
 #include<stdio.h>
 void main()
 {
+	
 char char_value;
 printf("enter a char:");
 scanf("%c",&char_value);
 
 switch(char_value)
 {
-    case 'a';
-    case 'e';34
-    case 'o';
-    case 'i';
-    case 'u';
+    case 'a':
+    case 'e':
+    case 'o':
+    case 'i':
+    case 'u':
     printf("a vowel");
     break;
     
     default:
     printf("not a vowel");
 }
+
 }
 ============================================================================
+pro 26:
 #include<stdio.h>
 void main()
 {
@@ -554,6 +505,7 @@ void main()
     }
 }
 ==================================================================================
+pro 27:
 #include<stdio.h>
 void main()
 {
@@ -569,6 +521,7 @@ void main()
     }
 }
 =================================================================================
+pro 28:
 #include<stdio.h>
 void main()
 {
@@ -583,6 +536,7 @@ void main()
     }
 }
 ==================================================================
+pro 29:
 #include<stdio.h>
 void main()
 {
@@ -596,6 +550,7 @@ void main()
     }
 }
 ===============================================================================
+pro 30:
 #include<stdio.h>
 #include<stdbool.h>
 void main()
@@ -626,6 +581,7 @@ while(flag)
 }
 }
 ============================================================================
+pro 31:
 #include<stdio.h>
 #include<stdbool.h>
 void main()
@@ -653,6 +609,7 @@ while(status)
 printf("\n total %d",sum);
 }
 ==================================================
+pro 32:
 #include<stdio.h>
 #include<stdbool.h>
 void main()
@@ -671,11 +628,9 @@ void main()
     printf("\n factorial = %d",f);
 }
 ==================================================
+pro 33:
 //nested for loop
 #include <stdio.h>
-
-
-
 int main()
 {
   int row;
@@ -691,6 +646,7 @@ int main()
   }
 }
 ==============================================
+pro 34:
 #include<stdio.h>
 int main()
 {
@@ -705,7 +661,10 @@ int main()
         {
       printf(" \n %d ",i);
     }
+    }
+}
 ===============================================
+pro 35:
 #include<stdio.h>
 int main()
 {
@@ -720,24 +679,31 @@ int main()
     while(choice<3 && choice>0);
 }
 ==================================================
+pro 36:
 #include <stdio.h>
 
 int main()
 {
-    int choice;
-    while(choice!=3){
-        continue;
-        printf("%d",choice);
-       choice++;
+    int choice = 0;
+
+    while(choice != 3)
+    {
+        printf("Enter a number : ");
+        scanf("%d", &choice);
+
+        printf("%d\n", choice);
     }
+
+    return 0;
 }
 ===================================================================
+pro 37:
 #include <stdio.h>
 
 int main()
 {
     int row,col;
-    for(row=1;row<5;rpw++)
+    for(row=1;row<5;row++)
     {
      for(col=1;col<=row;col++)
      {
@@ -754,20 +720,8 @@ int main()
         printf("\n");
     }
 }
-=====================================================================
-#include <stdio.h>
-
-int main()
-{
-    int i;
-    do
-    {
-        printf("\n %d",i);
-        i++;
-    }while(i<=5);
-    
-}
 ========================================================================
+pro 38:
 #include <stdio.h>
 
 int main()
@@ -781,6 +735,7 @@ int main()
     
 }
 ==========================================================================
+pro 39:
 #include<stdio.h>
 //step 1 : function declaration
 
@@ -789,7 +744,7 @@ void main()
 {
     printf("\n this is function example\n");
     //step 3:function calling
-    mufun(); 
+    myfun(); 
 }
 // step 2 : function define
 void myfun()
@@ -798,94 +753,81 @@ void myfun()
     printf("example of function ");
 }
 ===============================================================
-
+pro 40:
 #include <stdio.h>
 
 void add();
 void mul();
 void division();
 void sub();
-void main()
+
+int main()
 {
-int choice;
+    int choice;
 
-printf("\n menu ::");
-printf("\n press 1 for addition");
-printf("\n press 2 for multiplication");
-printf("\n press 1 for division");
-printf("\n press 1 for substraction");
+    printf("\n menu ::");
+    printf("\n press 1 for addition");
+    printf("\n press 2 for multiplication");
+    printf("\n press 3 for division");
+    printf("\n press 4 for subtraction");
 
-printf("\n enter your choice");
-scanf("%d",&choice);
+    printf("\n enter your choice: ");
+    scanf("%d", &choice);
 
-switch(choice)
-{
-   case 1:
-   add();
-   break;
-   
-   case 2:
-   mul();
-   break;
-    case 3:
-   division();
-   break;
-    case 4:
-   sub();
-   break;
-  
+    switch(choice)
+    {
+        case 1: add(); break;
+        case 2: mul(); break;
+        case 3: division(); break;
+        case 4: sub(); break;
+        default: printf("invalid choice");
+    }
+
+    return 0;
 }
+
 void add()
 {
     int num1,num2;
     printf("enter number 1 :");
     scanf("%d",&num1);
-    
     printf("enter number 2 :");
     scanf("%d",&num2);
-    
-    int ans=num1+num2;
-    printf("\n ans=%d",ans);
+    printf("\n ans=%d",num1+num2);
 }
+
 void mul()
 {
     int num1,num2;
     printf("enter number 1 :");
     scanf("%d",&num1);
-    
     printf("enter number 2 :");
     scanf("%d",&num2);
-    
-    int ans=num1*num2;
-    printf("\n ans=%d",ans);
+    printf("\n ans=%d",num1*num2);
 }
+
 void division()
 {
     int num1,num2;
     printf("enter number 1 :");
     scanf("%d",&num1);
-    
     printf("enter number 2 :");
     scanf("%d",&num2);
-    
-    int ans=num1/num2;
-    printf("\n ans=%d",ans);
+    printf("\n ans=%d",num1/num2);
 }
+
 void sub()
 {
     int num1,num2;
     printf("enter number 1 :");
     scanf("%d",&num1);
-    
     printf("enter number 2 :");
     scanf("%d",&num2);
-    
-    int ans=num1-num2;
-    printf("\n ans=%d",ans);
+    printf("\n ans=%d",num1-num2);
 }
 
-}
 ==================================================================
+pro 41:
 #include<stdio.h>
 #include<stdbool.h>
 void votting();
@@ -979,6 +921,7 @@ void po_ne()
     }
 }
 ====================================================================
+pro 42:
 #include <stdio.h>
 void add(int num1,int num2);
 int main()
@@ -1000,6 +943,7 @@ void add(int num1,int num2)
     printf("\n ans=%d",num1+num2);
 }
 ===========================================================
+pro 43:
 // function with return value
 #include <stdio.h>
 int sum()
@@ -1020,6 +964,7 @@ int main()
     printf("\n res=%d",res);
 }
 ==== ========================================================
+pro 44:
 // function with return value and function with perameters
 #include <stdio.h>
 int sum(int a,int b)
@@ -1038,6 +983,7 @@ int main()
   printf("\n ans =%d",ans);
 }
 =======================================================
+pro 45:
 #include <stdio.h>
 int findf(int num)
 {
@@ -1059,5 +1005,84 @@ int main()
  res=findf(number);
  printf("\n res = %d",res);
 }
+===========================================================
+pro 46:
+#include <stdio.h>
+// function for sum with pera
+int sum(int size)
+{
+    int a[size]={};
+    int sum=0;
+    for(int i=0;i<size;++i){
+        printf("Enter a %d value :- ",i);
+        scanf(" %d",&a[i]);
+    }
+    
+    for(int i=0; i<size; ++i)
+    {
+        sum += a[i];
+    }
+    return sum;
+}
 
+int main()
+{
+    int size=0;
+    
+    printf("Enter your Array Size :- ");
+    scanf("%d",&size);
+    
+    printf("Sum is = %d",sum(size));
 
+    printf("\nSum is = %d",sum(size));
+
+    return 0;
+}
+===============================================================
+pro 47:
+#include <stdio.h>
+// function for sum with pera
+int sum(int arr[],int size)
+{
+    int sum=0;
+    
+    for(int i=0; i<size;++i)
+    {
+        sum += arr[i];
+    }
+    return sum;
+}
+
+int main()
+{
+    int size=0;
+    
+    printf("Enter your Array Size :- ");
+    scanf("%d",&size);
+    
+    int arr[size]={};
+    
+    for(int i=0;i<size;++i)
+    {
+        printf("Enter a %d value :- ",i);
+        scanf(" %d",&arr[i]);
+    }
+    
+    printf("Sum is = %d",sum(arr,size));
+    //printf("\nSum is = %d",sum(size));
+
+    return 0;
+
+}
+==============================================================
+/*
+5
+
+ 0  1  1  2  3
+ f=0
+ s=1
+ temp=f+s;
+ f=s;
+ s=temp;
+*/
+use of fibonacci series (logic)

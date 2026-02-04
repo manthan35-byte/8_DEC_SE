@@ -1,0 +1,21 @@
+structure is a userdefine data type which is contain similar and dis-similar data element 
+
+structure which is one kind of group which contain dis-similar data elements
+
+array vs structure
+
+array can contain only similar data elements in single variable
+
+at that time structure can contain multiple elements of diffrent data types in single variable 
+
+syntax of structure:
+
+structure which is represent by struct keyword
+
+struct<structurename>
+{
+    datatype var;
+    datatype var;  
+    .
+    .
+};
