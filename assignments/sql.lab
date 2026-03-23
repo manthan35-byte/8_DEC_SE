@@ -1,0 +1,326 @@
+LAB exercise 1:
+=>create database school_db;
+
+=>use school_db
+Database changed
+
+=> create table student
+    -> (
+    -> student_id int,
+    -> student_name varchar(20),
+    -> age int,
+    -> class varchar(20),
+    -> address varchar(20)
+    -> );
+Query OK, 0 rows affected (0.05 sec)
+
+=> insert into student
+    -> values
+    -> (1,'raj',16,11,'kabir chowk'),
+    -> (2,'man',18,12,'abu street'),
+    -> (3,'kabir',15,10,'abhaypark socity'),
+    -> (4,'mahi',16,11,'porval socity'),
+    -> (5,'reena',17,12,'abhaypark socity');
+Query OK, 5 rows affected (0.04 sec)
+Records: 5  Duplicates: 0  Warnings: 0
+
+=> select * from student;
++------------+--------------+------+-------+------------------+
+| student_id | student_name | age  | class | address          |
++------------+--------------+------+-------+------------------+
+|          1 | raj          |   16 | 11    | kabir chowk      |
+|          2 | man          |   18 | 12    | abu street       |
+|          3 | kabir        |   15 | 10    | abhaypark socity |
+|          4 | mahi         |   16 | 11    | porval socity    |
+|          5 | reena        |   17 | 12    | abhaypark socity |
++------------+--------------+------+-------+------------------+
+5 rows in set (0.00 sec)
+
+LAB exercise 2:
+
+=>select student_name,age from student;
++--------------+------+
+| student_name | age  |
++--------------+------+
+| raj          |   16 |
+| man          |   18 |
+| kabir        |   15 |
+| mahi         |   16 |
+| reena        |   17 |
++--------------+------+
+5 rows in set (0.01 sec)
+
+=>select * from student where age > 10;
++------------+--------------+------+-------+------------------+
+| student_id | student_name | age  | class | address          |
++------------+--------------+------+-------+------------------+
+|          1 | raj          |   16 | 11    | kabir chowk      |
+|          2 | man          |   18 | 12    | abu street       |
+|          3 | kabir        |   15 | 10    | abhaypark socity |
+|          4 | mahi         |   16 | 11    | porval socity    |
+|          5 | reena        |   17 | 12    | abhaypark socity |
++------------+--------------+------+-------+------------------+
+5 rows in set (0.02 sec)
+
+LAB exercise 3:
+create table teachers
+    -> (
+    -> teacher_id int primary key,
+    -> teacher_name varchar(20) not null,
+    -> subject varchar(20) not null,
+    -> email varchar(20) unique
+    -> );
+
+=> Alter table student add teacher_id int ,add foreign key(teacher_id)   references teachers(teacher_id);
+
+LAB exercise 4:
+
+=>create database university_db;
+Query OK, 1 row affected (0.02 sec)
+
+=>use university_db
+Database changed
+
+=>create table courses
+    -> (
+    -> cource_id int primary key,
+    -> cource_name varchar(20),
+    -> cource_credits varchar(20)
+    -> );
+Query OK, 0 rows affected (0.04 sec)
+
+LAB exercise 5:
+
+=> alter table courses add course_duration varchar(20);
+Query OK, 0 rows affected (0.06 sec)
+
+=> alter table courses drop cource_credits;
+Query OK, 0 rows affected (0.07 sec)
+
+LAB exercise 6:
+
+=>use database school_db
+Database changed
+
+=>mysql> show tables;
++---------------------+
+| Tables_in_school_db |
++---------------------+
+| student             |
+| teachers            |
++---------------------+
+
+=>alter table student drop foreign key student_ibfk_1;
+Query OK, 0 rows affected (0.03 sec)
+
+=> drop table teachers;
+Query OK, 0 rows affected (0.03 sec)
+
+=> drop table student;
+Query OK, 0 rows affected (0.02 sec)
+
+=>show tables;
+Empty set (0.00 sec)
+
+LAB exercise 7:
+
+=>insert into courses
+    -> values
+    -> (1,'bca','3year'),
+    -> (2,'mca','5year'),
+    -> (3,'bcom','4year');
+
+=>update courses  set course_duration = '4year'  where cource_id = 1;
+Query OK, 1 row affected (0.02 sec)
+
+=>delete from courses where cource_id = 2;
+Query OK, 1 row affected (0.02 sec)
+
+LAB exercise 8:
+
+=> select * from courses;
++-----------+-------------+-----------------+
+| cource_id | cource_name | course_duration |
++-----------+-------------+-----------------+
+|         1 | bca         | 4year           |
+|         3 | bcom        | 4year           |
++-----------+-------------+-----------------+
+2 rows in set (0.00 sec)
+
+=> select * from courses order by course_duration desc;
++-----------+-------------+-----------------+
+| cource_id | cource_name | course_duration |
++-----------+-------------+-----------------+
+|         2 | mca         | 5year           |
+|         1 | bca         | 4year           |
+|         3 | bcom        | 4year           |
++-----------+-------------+-----------------+
+3 rows in set (0.00 sec)
+
+=> select * from courses limit 2;
++-----------+-------------+-----------------+
+| cource_id | cource_name | course_duration |
++-----------+-------------+-----------------+
+|         1 | bca         | 4year           |
+|         2 | mca         | 5year           |
++-----------+-------------+-----------------+
+
+LAB exercise 9:
+
+=>create user 'user1'@'localhost' identified by '11000';
+Query OK, 0 rows affected (0.03 sec)
+
+=> create user 'user2'@'localhost' identified by '00111';
+Query OK, 0 rows affected (0.02 sec)
+
+=>grant select on courses to 'user1'@'localhost';
+Query OK, 0 rows affected (0.02 sec)
+
+=>revoke insert on courses from 'user1'@'localhost';
+Query OK, 0 rows affected (0.02 sec)
+
+=>grant insert on courses to 'user2'@'localhost';
+Query OK, 0 rows affected (0.01 sec)
+
+LAB exercise 10:
+
+=>insert into courses
+    -> values
+    -> (4,'c programing','50'),
+    -> (6,'c++','40'),
+    -> (5,'java','75');
+Query OK, 3 rows affected (0.01 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+=>commit;
+Query OK, 0 rows affected (0.00 sec)
+
+=> start transaction;
+Query OK, 0 rows affected (0.01 sec)
+
+=> insert into courses
+    -> values
+    -> (7,'js','45'),
+    -> (8,'php','70');
+Query OK, 2 rows affected (0.00 sec)
+Records: 2  Duplicates: 0  Warnings: 0
+
+=> rollback;
+Query OK, 0 rows affected (0.02 sec)
+
+=>start transaction;
+Query OK, 0 rows affected (0.00 sec)
+
+=> insert into courses
+    -> values
+    -> (11,'python','72'),
+    -> (13,'react','90');
+Query OK, 2 rows affected (0.00 sec)
+Records: 2  Duplicates: 0  Warnings: 0
+
+=> savepoint sp1;
+Query OK, 0 rows affected (0.00 sec)
+
+=> update courses set cource_name='nodejs' where cource_id=152;
+Query OK, 0 rows affected (0.00 sec)
+Rows matched: 0  Changed: 0  Warnings: 0
+
+=> rollback to sp1;
+Query OK, 0 rows affected (0.00 sec)
+
+=> commit;
+Query OK, 0 rows affected (0.01 sec)
+
+LAB exercise 11:
+
+=> create table department
+    -> (
+    -> dep_id int primary key,
+    -> dep_name varchar(20)
+    -> );
+Query OK, 0 rows affected (0.05 sec)
+
+=> create table emp
+    -> (
+    -> emp_id int primary key,
+    -> emp_name varchar(20),
+    -> dep_id int
+    -> );
+Query OK, 0 rows affected (0.04 sec)
+
+=> insert into department
+    -> values
+    -> (1,'hr'),
+    -> (2,'it'),
+    -> (3,'finance');
+Query OK, 3 rows affected (0.01 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+=> insert into emp
+    -> values
+    -> (101,'rahul',1),
+    -> (102,'man',2),
+    -> (103,'amit',3);
+Query OK, 3 rows affected (0.02 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+=> select emp.emp_id,emp.emp_name,department.dep_name from emp inner join department on emp.dep_id = department.dep_id;
++--------+----------+----------+
+| emp_id | emp_name | dep_name |
++--------+----------+----------+
+|    101 | rahul    | hr       |
+|    102 | man      | it       |
+|    103 | amit     | finance  |
++--------+----------+----------+
+3 rows in set (0.00 sec)
+
+=>select department.dep_id,department.dep_name,emp.emp_name from department left join emp on department.dep_id = emp.dep_id;
++--------+----------+----------+
+| dep_id | dep_name | emp_name |
++--------+----------+----------+
+|      1 | hr       | rahul    |
+|      2 | it       | man      |
+|      3 | finance  | amit     |
++--------+----------+----------+
+3 rows in set (0.00 sec)
+
+LAB exercise 12:
+
+=> create table empl
+    -> (
+    -> empl_id int primary key,
+    -> empl_name varchar(20),
+    -> dep_id int,
+    -> salary int
+    -> );
+Query OK, 0 rows affected (0.04 sec)
+
+=> insert into empl
+    -> values
+    -> (1,'rahul',1,30000),
+    -> (2,'man',2,40000),
+    -> (3,'raj',2,70000),
+    -> (4,'shayam',3,60000),
+    -> (5,'ravi',1,90000);
+Query OK, 5 rows affected (0.01 sec)
+Records: 5  Duplicates: 0  Warnings: 0
+
+=> select dep_id, count(*) as total_empl from empl group by dep_id;
++--------+------------+
+| dep_id | total_empl |
++--------+------------+
+|      1 |          2 |
+|      2 |          2 |
+|      3 |          1 |
++--------+------------+
+3 rows in set (0.02 sec)
+
+=>select dep_id, avg(salary) as avrage_salary from empl group by dep_id;
++--------+---------------+
+| dep_id | avrage_salary |
++--------+---------------+
+|      1 |    60000.0000 |
+|      2 |    55000.0000 |
+|      3 |    60000.0000 |
++--------+---------------+
+3 rows in set (0.01 sec)

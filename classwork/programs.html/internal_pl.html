@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .container
+        {
+            background-color: rgb(209, 39, 130);
+            color: white;
+            height: 250px;
+            display: flex;
+        }
+        .subcontainer
+        {
+            background-color: rgb(17, 134, 134);
+            color: white;
+            height: 100px;
+            width: 100px;
+            padding: 20px;
+            margin: 20px;
+            
+        }
+        div h1
+        {
+            text-align: center;
+        }
+        .content
+        {
+            background-color: rgb(26, 184, 184);
+            color: white;
+            padding: 20px;
+            display: none;
+        }
+        a
+        {
+            text-decoration: none;
+            color: white;
+            display: block;
+        }
+        a:hover 
+        {
+            color: teal;
+        }
+        .content:target 
+        {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="subcontainer">
+            <a href="#python">
+         <h1>python</h1>
+         </a>
+        </div>
+        </div>
+
+        <div class="container">
+        <div class="subcontainer">
+        <a href="#java">
+         <h1>java</h1>
+         </a>
+        </div>
+        </div>
+
+        <div class="container">
+        <div class="subcontainer">
+        <a href="#html">
+         <h1>html</h1>
+         </a>
+        </div>
+        </div>
+        <div id="python" class="content">
+            <h1>python : most powerful programing language</h1>
+        </div>
+        <div id="java" class="content">
+            <h1>java : higher programing language</h1>
+        </div>
+        <div id="html" class="content">
+            <h1>html : hyper text markup language</h1>
+        </div>
+</body>
+</html>

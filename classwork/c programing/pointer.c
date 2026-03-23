@@ -53,9 +53,9 @@ actual perameter and foraml perameter
 
 foraml perameter : 
 
-foraml perameter pass in function defination time 
+foraml perameter pass in function defination time.
 
-actua perameter pass at function calling time.
+actual perameter pass at function calling time.
 
 e.g. 
 #include<stdio.h>
@@ -67,7 +67,7 @@ void sum(int a,int b)// formal perameters
 void main()
 {
     int a=10,b=20;
-    sum(a,b)//actua perameters
+    sum(a,b)//actual perameters
 }
 --------------------------------------------------------------------------------
 call by value : call by value is a most powerful concept of function and pointer topic 

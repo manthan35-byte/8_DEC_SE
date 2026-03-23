@@ -1,0 +1,437 @@
+oops : object oriented programing system 
+
+class : class is a collection of diffrent diffrent data members
+
+class is a blueprint of object 
+
+class is a collection of element 
+
+syntax : 
+class <classname>()
+{
+    public:
+           data member;
+           member function();
+};
+ 
+----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+
+object : object is an instance of class or we can say that object is a variable is a variable of class.
+
+using of object we can access properties of class.
+
+syntax :
+
+classsname objname = classname();
+----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+constructor : constructor is a most powerful concept of c++
+
+constructor is a special member function or we say  can that  constructor is a special method 
+
+which is invoke automatically whenever we create object of class 
+
+it is usually work for initlization of member.
+
+note : 
+      constructor does not have any return typen and constructor always declare in public mode.
+      constructor name and classname both are same we can't take diffrent as a constructor.
+
+      syntax : 
+
+      class <classname>
+      {
+        constructor:
+        body of constructor
+      }
+
+----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+
+there are 3 types of constructor :
+1) default constructor
+2) parameter constructor
+3)copy constructor
+
+--------------------------------------------------------------------
+
+1) default constructor : does not contain any parameter when we want to display or 
+do some static value we can use default constructor.
+
+2) parameter constructor : when we pass parameter at object creation time
+its called parameterized constructor.
+
+3)copy constructor : copy constructor is a special constructor which create new object using of existing object.
+
+syntax : 
+
+constructorname  (const classname &obj)
+{
+  ....
+}
+----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+
+this pointer : this pointer which is refer current class object 
+
+means we can define current class member using of this pointer
+
+----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+
+pass by value : function parameter we are passing only object
+it wil not affect original value.
+
+pass by refrence : we are passing refrence of object
+so,whenever we apply change it affect original value.
+
+pass by address : pointer concept
+
+we are passing address of object so,whenever we apply changes in address it affect original value.
+----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+inheritence : 
+
+inheritence is a most powerful concept of oops concept 
+
+->inheritence provide resubility - so,we reduce our work and save devlopment time 
+
+->inheritence provide parent and child relationship 
+
+there are 5 types of inheritence : 
+
+1)single level inheritence
+2)multi level inheritence
+3)multiple inheritence
+4)hierarchical inheritence
+5)hybird inheritence
+
+->inheritence is a part of relationship so,it represent IS-A relationship
+
+parent - child (100% utility of parent's peoperties)
+
+----- ----- ----- ----- ----- ----- ----- 
+1) single level inheritence : 
+
+A     (Parents)
+|
+B     (child)
+
+syntax : 
+
+class parentclass
+{
+
+};
+class childclass : <accessspecifier> <parentclass>
+{
+
+};
+----- ----- ----- ----- ----- ----- -----
+2) multi level inheritence : 
+
+Eatended level of multi inheritence : 
+
+Class A                            //class A is a super class or base class or parents class
+{
+
+};
+class B :public <parentclass>      //class B is a intermediate parent class 
+{
+
+};
+class C : public <parentclass>     //class C is a sub class or derived class or child class
+{
+
+};
+----- ----- ----- ----- ----- ----- -----
+3) multiple inheritence : 
+
+in this inheritence there are more then one parent class and one child class 
+
+means one child can have more then one parent or we can say that multiple parentclass
+
+but in real world multiple inheritence not work because in real world two 
+parent not possible thats why java don't support this concept 
+
+multiple inheritence the main aim to achive multiple parent's functionality in one child class
+
+syntax : 
+
+class parent1
+{
+
+};
+
+class parent2
+{
+
+};
+
+class child : <accessspecifier> parent1,<accessspecifier> parent2
+{
+
+};
+
+but there are possibllity of ambiugity(confusion between same name properties)
+
+--> there is one issue or we can say problem with multiple inheritence 
+
+ambiugity : ambiugity means when both parents have same name method and child import 
+(inhrite),it genrate confusion its call ambiugity.
+
+----- ----- ----- ----- ----- ----- -----
+4)hierarchical inheritence : 
+
+             a 
+             |
+      ------------------
+      |                |
+      B                c       
+
+when one parent have multiple child class.
+----- ----- ----- ----- ----- ----- -----
+5)hybird inheritence : 
+
+most comlicated inheritence
+
+because it represent like dimond - and it create ambiugity
+
+in simple language we can say that hybride inheritence
+is a combinatoin of multiple and hierarchical inheritence
+
+
+                 A 
+        -------------------------         
+        |                        |
+        B                        C 
+        \                        /
+          \                    /
+            \                /
+              \            /
+                \        /
+                  \    /
+                      C 
+
+to resolve diamond problem we can use virtual keyword
+
+now,virtual keyword inform compiler that you don't have to create 
+saprate copy of parent class insted of seprate copy you can 
+pass duplicate copy so,it remove ambiugity
+
+----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+access specifiers or visibility modes 
+
+there are 3 types of specifiers
+
+1)public
+2)private 
+3)protected
+
+----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+in structure by default all members are public but in class 
+by default all members are private so,we have to define in public class. 
+
+--> public : we can access properties from anywhere inside and outside the class.
+
+--> private : private means private data - we can't access outside the class 
+even child class can't use private class data member and member function.
+
+so,private provide data protection and data hiding in class functionality
+
+only own class can access
+
+-->protected : protected is similar as private but protected member 
+can access by own class and child class.
+
+-->own class and child class.
+
+----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+destructor : destroctor mainly work to destroy object 
+whenever we close our block in automatically destroy object after use .
+
+--> same like constructor declare in public mode as destructor declare in public mode 
+but un destroctor we have to add ~ sign in prefix and same as class name 
+
+syntax : 
+
+~classname
+{
+  //body
+}
+
+----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+encapsulation : so sound like capsule 
+
+--> encapsulation is a most powerful concept of oop which is bind 
+diffrent diffrent data member and  member function is single entity
+and provide data hiding from outside the world.
+
+encapsulation concept is achhive by class and object example.
+
+----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+polymophism : poly means many and morphism means forms 
+
+--> one named has diffrent forms it called polymophism
+
+-->polymophism is derived from greek word means one class can contain same name 
+multiple methods
+
+there are two types of polymophism :
+1)method overloading - compile time polymophism
+2)method overriding - run time polymophism
+
+----- ----- ----- ----- ----- ----- -----
+1) compile time polymophism :
+which is also known as early binding and static polymophism
+
+which is achive by method overloading and operator overloading.
+
+----- ----- ----- ----- ----- ----- -----
+2) run time polymophism : 
+which is known as late binding and dynamic polymophism 
+
+which is acherive by method overriding (inheritence) and virtual function.
+
+----- ----- ----- ----- ----- ----- -----
+method overloading : 
+--> when one class can contain sam name multiple methods its called 
+method overloading.
+
+product 
+  ->clickevent
+        (image)
+        (button)
+        (text)
+
+note : same name method with diffrent signature (perameter)
+
+----- ----- ----- ----- ----- ----- -----
+method overriding :
+when parent and child both have same name method and same name argument its called
+method overriding.
+
+-->syntax : 
+
+class Parent 
+{
+  void display() 
+  {
+
+  }
+};
+class child(parent) 
+{
+  void display()
+  {
+
+  }
+};
+----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+abstraction : abstraction is a concept which provide only
+few infromation not allowcated background infromation.
+
+the main aim of abstraction concept is to acherive data hiding and
+hide method.
+
+abstraction is a concept which is only acherived data hiding 
+abstract method.
+
+-->abstract method / pure virtual function : 
+
+pure virtual function means function does not contain implementation
+
+abstract method which is indicate by pure virtual function means without 
+body only method declaration.
+
+syntax : 
+
+virtual <returntype> funname()=0;
+
+
+                    A (house)
+                    |
+                    |
+          --------------------
+          |                   |
+          B                   C           
+
+at the time of inheritence there is no data hiding between two child.
+so,resolve this situation we can use abstraction concept here.
+
+-->abstract class : 
+A class which can contain abstract method its called abstract class.
+
+----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+aggregation : aggregation is a part of relationship
+
+inheritence provide IS - A relationship
+aggregation provide HAS - A relationship
+
+IS - A relationship :  parent is connected with child
+                    (100 % inhrite)
+
+HAS - A relationship : department has staff 
+                      (we are use properties of another class using reference instad of inhrite)
+
+----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+friend function:  friend function is a special member function which can access 
+private member outside class .
+
+friend function declare with using  of friend keyword.
+
+syntax : 
+friend <returntype> <funname> (classname obj);
+
+----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+friend class :
+
+A class can access property of another class private property
+
+syntaX : 
+
+class anotherclass;//forward declaration 
+
+class MainClass
+{
+  private :
+  member 
+
+  friend class <friendclassname>
+};
+
+----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+File handling concept in c++
+
+file handling : to accept data from user and store in file 
+or we can say that to perform operation on  file 
+
+file operations : 
+->create 
+-> read 
+->write 
+->delete 
+->update 
+
+file handling class  :
+
+1)fstream 
+2)ifstream 
+3)ofstream
+
+1)fstream : file stream  -  it is used for both read and write operations
+
+2)ifstream : input file stream  -  it is used for read operations
+
+3)ofstream : output file stream -  it is used for write operations 
+
+
+file handling syntax : 
+
+#include<fstream>
+
+fstream <filename> <mode>;
+
+file handling modes :
+
+1)ios::in - input mode 
+2)ios::out - output mode 
+3)ios::app - append mode
+4)ios::trunc - truncate mode
+5)ios::binary - binary mode
+6)ios::ate - at end mode 

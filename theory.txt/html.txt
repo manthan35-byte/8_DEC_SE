@@ -1,0 +1,105 @@
+HTML : Hyper Text Markup Language 
+
+        html stands for markup pages 
+
+        using of html we can design web pages which is run on web browsers. 
+
+html is a combination or collection of multiple tags 
+
+there are 2 types of tags 
+
+1) singular tag 
+2) paired tag 
+
+--------------------------------
+1) singular tag : there are only 3 tags 
+
+    <br>
+    <hr>
+    <img> 
+
+2) paired tag : which contain opening and closing bracket. 
+
+    syntax :: 
+
+    <openingtag> content goes here... </closingtag>
+
+
+-----------------------------------------------------
+structure of html 
+
+<html>
+
+    <head> .. </head>
+
+    .
+
+    <body> ... </body>
+</html>
+
+
+===================================
+heading tags ::: 
+
+<h1>.... </h1>
+<h2> ... </h2>
+.
+.
+<h6> ... </h6>
+
+===================================
+paragraph tag : 
+
+<p> : paragraph tag which is represent by p tag which contain paragraph value 
+
+=======================================
+list : 
+
+there are 3 types of list 
+
+1) unorder list 
+2) order list 
+3) description list 
+
+-------------------------------
+1) unorder list : which is represent by <ul> tag
+
+    <ul>
+        <li>... item content here.. </li>
+        <li>... item content here.. </li>
+        ..
+
+    </ul>
+
+2) order list : which is represent by <ol> 
+
+    <ol>
+        <li>order list</li>
+        .
+        .
+    </ol>
+
+3) description list : which is represent by <dl>
+
+    <dl>
+        <dt>description tag </dt>
+        <dd>description detailed</dd>
+    </dl>
+
+-----------------------------------------------------
+table :
+
+<table> : to create table for html web page 
+
+<thead> : this is use to display table heading 
+
+<th> : table heanding tag 
+
+<tbody> : table body tag which display table body content
+
+<tr> : table row 
+
+<td> : table data 
+
+
+

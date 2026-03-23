@@ -1,0 +1,1085 @@
+1) pro :
+#include<iostream>
+using namespace std; //for not write std :: in every line
+int main()
+{
+// std::cout<<"hello welcome to c++";
+        cout<<"hello welcome to c++";
+}
+----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+2) pro :
+/*
+>> : extraction operator
+<<: insertion operator
+in c++ we can declare variable anywhere in program
+in c we have to declare at top
+
+diffrence between endl and \n
+endl : mainly use for new line and flush memory
+\n : for new line but faster then endl
+*/
+#include<iostream>
+using namespace std; 
+int main()
+{
+    cout<<"My first porgram of"<<endl;//<<endl written if we want end line 
+    cout<<"c++";
+}
+----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+3) pro :
+#include<iostream>
+using namespace std; 
+int main()
+{
+	int num;//variable declaration
+    cout<<"enter a number :";
+    cin>>num;
+    
+    //note : there is no need to use %d,%s,%c and any placeholder
+    cout<<"number="<<num<<endl;
+}
+----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+4) pro :
+//addition in c++
+#include<iostream>
+using namespace std; 
+int main()
+{
+	int a,b,c;
+	
+	cout<<"enter number 1 : ";
+	cin>>a;
+	cout<<"enter number 2 : ";
+	cin>>b;
+	c= a + b;
+    
+    // a= 10 and b=20
+	cout<<"a ="<<a<<" and "<<"b ="<<b<<endl;
+	
+	//10 + 20 =30
+	cout<<a<<"+"<<b<<"="<<c;
+	
+}
+----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+5) pro :
+/*
+#include<iostream>
+using namespace std; 
+int main()
+{
+	int m;
+	
+	cout<<"enter your age: ";
+	cin>>m;
+	
+	if(m>=18)
+	{
+		cout<<"elligble for votting";
+	}
+	else
+	{
+		cout<<"not elligble";
+	}
+}
+
+----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+
+
+#include<iostream>
+using namespace std; 
+int main()
+{
+	int m;
+	
+	cout<<"enter your marks: ";
+	cin>>m;
+	
+	if(m>70)
+	{
+		cout<<"grade A";
+	}
+	else if(m>50 && m<70)
+	{
+		cout<<"grade B";
+	}
+	else if(m>30 && m<50)
+	{
+		cout<<"grade C";
+	}
+	else
+	{
+		cout<<"fail";
+	}
+    
+}
+
+----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+
+#include<iostream>
+using namespace std; 
+int main()
+{
+	int a,b,c,choice;
+	
+	cout<<"enter number 1 : ";
+	cin>>a;
+	cout<<"enter number 2 : ";
+	cin>>b;
+	c= a + b;
+	cout<<"enter choice : ";
+	cin>>choice;
+    
+	switch(choice)
+	{
+		case 1:
+		c=a+b;
+		cout<<a<<"+"<<b<<"="<<c;break;
+		
+		case 2:
+		c=a-b;
+		cout<<a<<"-"<<b<<"="<<c;break;
+		
+		default:
+			cout<<"INVALID CHOICE"<<endl;
+	}
+	
+
+	
+}
+
+*/
+----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+6) pro :
+#include<iostream>
+using namespace std;
+class sample//class is a keyword and sample is a classname
+{
+	public://public mode
+	int a; //data member
+	string name;
+ };
+int main()
+{
+	//object creation 
+	sample obj = sample();
+	obj.a=10;
+	obj.name="manthan";
+	
+	cout<<"a ="<<obj.a<<endl;
+	cout<<"name ="<<obj.name<<endl;
+}
+----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+7) pro :
+#include<iostream>
+using namespace std;
+class Student//class is a keyword and sample is a classname
+{
+	public://public mode
+	int id; //data member
+	string name;
+	
+	void input()
+	{
+		cout<<"enter id : ";
+		cin>>id;
+		cout<<"enter name : ";
+		cin>>name;
+	}
+	
+	void display()
+	{
+		cout<<"id = "<<id<<endl;
+		cout<<"name ="<<name<<endl;
+	}
+ };
+int main()
+{
+	//object creation 
+	Student obj= Student();
+	obj.input();
+	obj.display();
+}
+
+----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+8) pro :
+#include<iostream>
+using namespace std;
+class Student//class is a keyword and sample is a classname
+{
+	public://public mode
+	int id; //data member
+	string name;
+	
+	Student(int idvalue,string namevalue)
+	{
+	id = idvalue;
+	name = namevalue;	
+	}
+	void display()
+	{
+		cout<<"id = "<<id<<endl;
+		cout<<"name ="<<name<<endl;
+	}
+ };
+int main()
+{
+	Student obj(123,"man");
+	obj.display();
+}
+
+----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+9) pro :
+//without using this pointer with same name parameter and same name member 
+#include<iostream>
+using namespace std;
+class Sample 
+{
+	public:
+	int a=10;
+	Sample()
+	{
+     a =a;
+     cout<<"inside the constructor : a = "<<a<<endl;
+	}
+	
+	void display()
+{
+cout<<"a ="<<a<<endl;
+}
+};
+main()
+{
+	Sample obj=Sample(200);
+    obj.display();
+}
+
+//solution ::
+#include<iostream>
+using namespace std;
+class Sample 
+{
+	public:
+	int a=10;
+	Sample(int a1)
+	{
+     a =a1;
+     cout<<"inside the constructor : a = "<<a<<endl;
+	}
+	
+	void display()
+{
+cout<<"a ="<<a<<endl;
+}
+};
+main()
+{
+	Sample obj=Sample(200);
+    obj.display();
+}
+//proper solution ::
+#include<iostream>
+using namespace std;
+class Sample
+{
+	public:
+	int a=10;
+	Sample(int a)
+	{
+		this->a=a;
+	}
+	void display()
+	{
+		cout<<"a="<<a<<endl;
+	}
+ };
+int main()
+{
+	Sample obj=Sample(100);
+	obj.display();
+}
+----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+10) pro : 
+// use of copy counstructor
+#include<iostream>
+using namespace std;
+class Sample
+{
+	public:
+	int a=10;
+	
+	Sample(const Sample &obj)
+	{
+		a= obj.a;
+	}
+	
+ };
+int main()
+{
+	Sample s1=Sample(s1);
+	Sample s2=s1;//copy counstructor
+	
+	cout<<"s1 a value : "<<s1.a<<endl;
+	cout<<"s2 a value : "<<s2.a<<endl;
+}
+----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+11) pro : 
+// use of pass by value
+#include<iostream>
+using namespace std;
+class Sample
+{
+	public:
+	int id=10;
+	
+	void display(Sample s)
+	{
+	 this->id=s.id;
+	 s.id=100;
+	 cout<<" id = "<<id<<endl;
+	 cout<<" object's id = "<<s.id<<endl;
+	}
+	
+ };
+int main()
+{
+	Sample s1;
+	s1.display(s1);
+	cout<<"s1.id = "<<s1.id<<endl;
+}
+----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+12) pro :
+//  use of pass by refrence
+#include<iostream>
+using namespace std;
+class Sample
+{
+	public:
+	int id;
+	
+	void display(Sample &s)// pass by refrence
+	{
+	s.id=100;
+	}
+	
+ };
+int main()
+{
+	Sample s1;
+	s1.id=10;
+	cout<<"s1.id ="<<s1.id<<endl;
+	s1.display(s1);
+	cout<<"s1.id ="<<s1.id<<endl;
+}
+----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+13) pro :
+#include<iostream>
+using namespace std;
+class Sample
+{
+	public:
+	int id;
+	
+	void display(Sample *s)// pass by address
+	{
+	s->id=100;
+	}
+	
+ };
+int main()
+{
+	Sample s1;
+	s1.id=10;
+	cout<<"s1.id ="<<s1.id<<endl;
+	s1.display(&s1);
+	cout<<"s1.id ="<<s1.id<<endl;
+}
+----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+14) pro :
+//example of single level inheritence
+#include<iostream>
+using namespace std;
+class Parent
+{
+	public:
+		int a=100;//member declaration
+};
+class Child:public Parent//we can use parent class member and properties using public Parents
+{
+	public:
+		void display()
+		{
+			cout<<"a ="<<a<<endl;
+		};
+};
+
+
+int main()
+{
+
+Child obj=Child();
+
+cout<<"a ="<<obj.a<<endl;
+
+obj.a=201;
+
+cout<<"a ="<<obj.a<<endl;
+
+}
+----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+15) pro :
+//example of single level inheritence
+#include<iostream>
+using namespace std;
+class A 
+{
+	public :
+	int num1;
+	
+	void inputa()
+	{
+		cout<<"enter number 1 :"<<endl;
+		cin>>num1;
+	}
+ } ;
+ class B : public A
+ {
+ 	public :
+ 		int num2;
+ 		void inputb()
+ 		{
+ 			cout<<"enter number 2 :"<<endl;
+ 			cin>>num2;
+		 } 	
+ };
+  class C : public B
+  {
+  	public :
+  		int ans;
+  		void display()
+  		{
+  			ans= num1+num2;
+  			cout<<"ans ="<<ans<<endl;
+		  }
+  };
+
+int main()
+{
+	C obj=C();
+	
+	obj.inputa();
+	obj.inputb();
+	obj.display();
+}
+----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+16) pro :
+//example of multiple inheritence
+#include<iostream>
+using namespace std;
+class A 
+{
+	public :
+	int a;
+	
+	void inputA()//if noth parents name metohd are same then it occur error or ambiugity
+	{
+		cout<<"enter a :"<<endl;
+		cin>>a;
+	}
+ } ;
+ class B  
+ {
+ 	public :
+ 		int b;
+ 		void inputB()//if both parents name metohd are same then it occur error or ambiugity
+ 		{
+ 			cout<<"enter b :"<<endl;
+ 			cin>>b;
+		 } 	
+ };
+  class C : public A,public B
+  {
+  	public :
+  		int ans;
+  		void display()
+  		{
+  			ans= a+b;
+  			cout<<"ans ="<<ans<<endl;
+		  }
+  };
+
+int main()
+{
+	C obj=C();
+	obj.inputA();
+	obj.inputB();
+	obj.display();
+}
+----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+17) pro :
+//example of multiple inheritence
+#include<iostream>
+using namespace std;
+class A 
+{
+	public :
+	
+	void input()//if noth parents name metohd are same then it occur error or ambiugity
+	{
+		cout<<"hii "<<endl;
+		
+	}
+ } ;
+ class B  
+ {
+ 	public :
+ 		
+ 		void input()//if noth parents name metohd are same then it occur error or ambiugity
+ 		{
+ 			cout<<"hello "<<endl;
+		 } 	
+ };
+  class C : public A,public B
+  {
+  	public :
+  		
+  		void display()
+  		{
+  			cout<<"new method"<<endl;
+		  }
+  };
+
+int main()
+{
+	C obj=C();
+	//solution of ambiugity is use of :: operator
+	obj.A::input();
+	obj.B::input();
+	obj.display();
+}
+----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+18) pro :
+#include<iostream>
+using namespace std;
+class A 
+{
+	public :
+	int num1,num2;
+	
+	void input()
+	{
+		cout<<"Enter number 1 : "<<endl;
+		cin>>num1;
+		
+		cout<<"Enter number 2 : "<<endl;
+		cin>>num2;
+			}
+	void display()
+	{
+		cout<<"number 1 :"<<num1<<endl;
+		cout<<"number 2 :"<<num2<<endl;
+					}				
+};
+class B :public A
+{
+	public :
+	int add; 
+	int addition()
+	{
+		add=num1+num2;
+		cout<<"num1 + num2 ="<<endl;
+		cin>>add;
+	}
+};
+class C : public A
+{
+	public :
+	int sub;
+	void subs()
+	{
+		sub=num1-num2;
+		cout<<"num1 - num2 ="<<endl;
+		cin>>sub;
+	}
+};
+
+ main()
+{
+	B objB=B();
+	C objC=C();
+	
+	objB.input();
+	objB.display();
+	objB.addition();
+	
+	cout<<endl;
+	
+	objC.input();
+	objC.display();
+	objC.subs();
+}
+----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+19) pro :
+//example of hybird inheritence
+#include<iostream>
+using namespace std;
+class A 
+{
+	public : 
+   int marks =100;
+   void hello()
+   {
+   	cout<<"hello";
+		   }		
+};
+class B :virtual public A //we cans end virtual copy for solve ambiugity in hybird inheritence
+{
+	public :
+	void displayb()
+	{
+		cout<<"marks :"<<marks<<endl;
+	}
+};
+class C :virtual  public A
+{
+	public : 
+	void displayc()
+	{
+		cout<<"marks :"<<marks<<endl;
+	}
+};
+class D :public B,public C
+{
+	public :
+
+};
+
+ main()
+{
+	D obj = D();
+	obj.displayb();
+	obj.displayc();
+    
+	obj.hello();
+	//obj.a::hello(); not work this :: method in hybird inheritence	
+}
+----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+20) pro :
+#include<iostream>
+using namespace std;
+class Sample
+{
+	public : 
+	Sample()
+	{
+		cout<<"hello welcome"<<endl;
+	}
+	~Sample()
+	{
+		cout<<"thank you for using our app"<<endl;
+	}
+};
+main()
+{
+	Sample obj=Sample();
+	obj.Sample();
+}
+----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+21)  pro : 
+ #include<iostream>
+using namespace std;
+class Bank
+{
+	public : 
+	    int balance;//data member
+};
+main()
+{
+	Bank b =bank();
+	b.balance=-23456;
+	cout<<"balance ="<<b.balance<<endl;
+}
+/*
+--> there is no data control - we can access from anywhere 
+-->there is no security - it is not safe for any kind of data
+solution : use hare encapsulation
+*/
+
+#include<iostream>
+using namespace std;
+class Bank
+{
+	private :
+		int balence;
+	public : 
+	    void deposite(int amount)
+	    {
+	    	if(amount > 0)
+	    	{
+	    		balence=amount;
+			}
+		}
+		int displaybalence()
+		{
+			return balence;
+		}
+};
+main()
+{
+	Bank b=Bank();
+	cout<<"add Deposite"<<endl;
+	int amount;
+	cout<<"enter amount which u want to deposite : "<<endl;
+	cin>>amount;
+	
+	b.deposite(amount);
+	cout<<b.displaybalence();
+}
+
+/*
+1) data hiding
+2) data prevent from outside world 
+3) security - no one can derictly change from outside the world 
+4) data control - no one can add unwanted value or apply changes
+*/
+
+----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+22) pro :
+//baki
+#include<iostream>
+using namespace std;
+class Student
+{
+	private :
+		int id;
+		string name;
+		int marks;
+		public :
+			void setId(int id)
+			{
+				this->id=id;
+			}
+			int getId()
+			{
+			return id;
+			}
+			string setName(string name)
+			{
+				this->name=name;
+			}
+			string getName()
+			{
+				return name;
+			}
+			itn setMarks(int marks)
+			{
+				this->marks=marks;
+			}
+			int getMarks()
+			{
+				return marks;
+			}
+};
+main()
+{
+    	
+}
+
+
+----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+23) pro :
+//use of method overloading
+#include<iostream>
+using namespace std;
+class Math
+{
+    public : 
+    void addition(int num1,int num2)
+    {
+    	cout<<num1+num2<<endl;
+	}
+	void addition(int num1, int num2,int num3)
+    {
+    	cout<<num1+num2+num3<<endl;
+	}
+	double addition(double num1,double num2)
+    {
+    	cout<<num1+num2<<endl;
+	}
+
+};
+main()
+{
+    	Math math=Math();
+    	math.addition(23,24);
+    	math.addition(74,45,42);
+    	math.addition(7,4);
+}
+
+----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+24) pro :
+//use of method overriding
+#include<iostream>
+using namespace std;
+class Parent
+{
+    public : 
+    void display()
+    {
+    	cout<<"this is p method"<<endl;
+	}
+
+};
+class Child : public Parent
+{
+   public :
+   void display()
+   {
+   	Parent::display();
+   	cout<<"this is c method";
+	   }	
+};
+main()
+{
+	Child obj=Child();
+	obj.display();
+}
+
+----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+25) pro :
+#include<iostream>
+using namespace std;
+class RBI
+{
+	public: 
+    virtual void roi()=0;
+};
+class SBI:public RBI
+{
+	public: 
+	void roi()
+	{
+		cout<<"7.9"<<endl;
+	}
+};
+class BOI:public RBI
+
+{
+    public: 
+	void roi()
+	{
+		cout<<"4.6"<<endl;
+	}	
+};
+main()
+{
+	SBI sbi=SBI();
+	BOI boi=BOI();
+	sbi.roi();
+	boi.roi();
+}
+----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+26) pro :
+#include <iostream>
+using namespace std;
+
+class Vehicle 
+{
+	public:
+		virtual void Wheels()=0;
+};
+class Car :public Vehicle
+{
+	public :
+		void Wheels()
+		{
+			cout<<"i have 4 wheels"<<endl;
+		}
+};
+class Bike :public Vehicle
+{
+	public :
+		void Wheels()
+		{
+			cout<<"i have 2 wheels"<<endl;
+		}
+};
+main()
+{
+	Car car=Car();
+	Bike bike=Bike();
+	
+	car.Wheels();
+	bike.Wheels();
+}
+----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+27) pro :
+#include <iostream>
+using namespace std;
+
+class Address
+{
+	public :
+		string city;
+		string state;
+		int pincode;
+		
+		Address(string city,string state,int pincode)
+		{
+			this->city=city;
+			this->state=state;
+			this->pincode=pincode;
+		}
+};
+class Student
+{
+	public :
+		string name;
+		Address* address;//refrence of Address class
+		
+		Student(string name,Address* address)
+		{
+			this->name=name;
+			this->address=address;
+		}
+		void display()
+		{
+		cout<<"name :"<<name<<endl;	
+		cout<<"city :"<<address->city<<endl;
+		cout<<"state :"<<address->state<<endl;
+		cout<<"pincode :"<<address->pincode<<endl;
+		}
+};
+main()
+{
+	Address a1=Address("ahamdabad","gujrat",380005);
+	Student s1=Student("man",&a1);
+	s1.display();
+}
+
+----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+28) pro :
+#include <iostream>
+using namespace std;
+
+class Sample
+{
+	private :
+		int score=100;
+	
+	public :
+		friend void displayScore(Sample obj);//method declaration only
+
+};
+void displayScore(Sample obj)
+{
+	cout<<"\nscore ="<<obj.score;
+}
+main()
+{
+	Sample obj=Sample();
+	displayScore(obj);
+}
+----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+29) pro :
+#include <iostream>
+using namespace std;
+
+class B;
+class A
+{
+	private :
+		int record =100;
+		friend class B;
+};
+class B
+{
+	public :
+	void display(A obj)
+	{
+		cout<<"record ="<<obj.record<<endl;
+	}
+};
+main()
+{
+	A objA=A();
+	B objB=B();
+	
+	objB.display(objA);
+}
+----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+30) pro :
+//file handling concept
+#include <iostream>
+#include <fstream>
+using namespace std;
+main()
+{
+	//open file and write something inside the file 
+	ofstream file("cpp_file.txt");
+	
+	file<<"\nwelcome to c++";
+	file<<"\nfile handling concept in c++";
+}
+
+----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+31) pro :
+//file handling concept
+#include <iostream>
+#include <fstream>
+using namespace std;
+main()
+{
+	//read concept from file
+	ifstream file("cpp_file.txt");
+	
+	string line;
+	
+	while(getline(file,line))
+	{
+		cout<<line<<endl;
+	}
+	file.close();
+
+}
+
+----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+32) pro :
+//file handling concept
+#include <iostream>
+#include <fstream>
+using namespace std;
+main()
+{
+	string name;
+	string subject;
+	
+	cout<<"Enter name : "<<endl;
+	cin>>name;
+	cout<<"Enter subject : "<<endl;
+	cin>>subject;
+	
+	ofstream file("new_file.txt",ios::app);
+	
+	file<<"name :"<<name<<endl;
+	file<<"subject :"<<subject<<endl;
+}
+
+----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+33) pro :
+
+----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+34) pro :
+
+----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+35) pro :
+
+----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+36) pro :
+
+----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+37) pro :
+
+----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----
+38) pro :
+
+----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- ----- -----

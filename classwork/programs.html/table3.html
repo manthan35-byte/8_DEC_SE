@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        table
+        {
+            border: 2px solid black;
+            border-collapse: collapse;
+            width: 100%;
+        }
+        tr,td,th 
+        {
+            border: 2px solid white;
+            padding: 10px;
+            text-align: center;
+        }
+        th
+        {
+            background-color: black;
+            color: rgb(223,223,223);
+        }
+        tr,td
+        {
+            background-color: rgb(11, 28, 61);
+            color: white;
+        }
+        body
+        {
+            background-color: rgb(225, 194, 201);
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+            <th rowspan="2">heading</th>
+            <th>subject</th>
+            <th colspan="3">detail</th>
+            </tr>
+            <tr>
+                <th>id</th>
+                <th>name</th>
+                <th>cource</th>
+                <th>roll no</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="3">student list</td>
+                <td>1</td>
+                <td>man</td>
+                <td>bca</td>
+                <td>13532</td>
+            </tr>
+
+            <tr>
+                <td>1</td>
+                <td>raj</td>
+                <td>mca</td>
+                <td>13495</td>
+            </tr>
+
+            <tr>
+                <td>3</td>
+                <td>ram</td>
+                <td>bcom</td>
+                <td>13475</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

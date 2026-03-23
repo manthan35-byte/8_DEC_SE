@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <style>
+    table
+    {
+        width: 100%;
+    }
+    tr,td
+    {
+        padding: 20px;
+        background-color: gray;
+        border: 10px solid ;
+        margin: 10px;
+        color: aqua;
+    }
+   </style>
+</head>
+<body>
+   <table>
+    <form >
+        <tr>
+            <td><label>First name :</label></td>
+            <td><input type="text" placeholder="enter ur first name" name="fname" required></td>
+        </tr>
+       
+         <tr>
+            <td><label >Email : </label></td>
+            <td><input type="email" placeholder="example@domain.com" name="email" required/></td>
+        </tr>
+         <tr>
+            <td><label >password : </label></td>
+            <td><input type="password" placeholder="enter ur password" name="password" required/></td>
+        </tr>
+         <tr>
+            <td><label >gender : </label></td>
+            <td>
+                <input type="radio" name="gender" value="MALE"/>male 
+                <input type="radio" name="gender" value="FEMALE">female
+            </td>
+        </tr>
+         <tr>
+            <td><label >hoobies : </label></td>
+            <td>
+                <input type="checkbox" name="h_chk" value="html"/>html 
+                <input type="checkbox" name="j_chk" value="java">java
+                 <input type="checkbox" name="p_chk" value="python">python
+            </td>
+        </tr>
+        <tr>
+            <td><label>city : </label></td>
+            <td>
+                <select name="city">
+                    <option selected disabled readonly>--select any--</option>
+                    <option value="ahamdabad">ahamdabad</option>
+                    <option value="surat">surat</option>
+                    <option value="rajkot">rajkot</option>
+                    <option value="mumbai">mambai</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td><label>address : </label></td>
+            <td><textarea rows="10" cols="20" placeholder="type ur address here..."></textarea></td>
+        </tr>
+         <tr>
+            <td><input type="submit" value="SUBMIT"/></td>
+        </tr>
+
+    </form>
+   </table> 
+</body>
+</html>

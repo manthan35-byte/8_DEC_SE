@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        table
+        {
+            width: 100%;
+        }
+       thead
+       {
+        border: 2px solid black;
+        border-collapse: collapse;
+        background-color: black;
+        color: white;
+       }
+       tr,td,th
+       {
+        border: 2px solid black;
+        border-collapse: collapse;
+       }
+        tbody
+        {
+            background-color: cyan;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th rowspan="3">day</th>
+                <th colspan="3">seminar</th>
+            </tr>
+            <tr>
+                <th colspan="2">shdule</th>
+            <th rowspan="2">topic</th>
+            </tr>
+            <tr>
+                <th>start</th>
+                <th>end</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="2">monday</td>
+                <td rowspan="2">08:00 AM</td>
+                <td rowspan="2">05:00 PM</td>
+                <td>introduction</td>
+            </tr>
+            <tr>
+                <td>uses</td>
+            </tr>
+            <tr>
+                <td rowspan="4">tuesday</td>
+                <td>08:00 AM</td>
+                <td>11:00 PM</td>
+                <td>--</td>
+            </tr>
+            <tr>
+                <td>11:00 AM</td>
+                <td>02:00 PM</td>
+                <td>learn</td>
+            </tr>
+            <tr>
+                <td>08:00 AM</td>
+                <td>11:00 PM</td>
+                <td rowspan="2">--</td>
+            </tr>
+            <tr>
+                <td>08:00 AM</td>
+                <td>11:00 PM</td>
+            </tr>
+            <tr>
+                <td>wed-fri</td>
+                <td colspan="2">full day</td>
+                <td>practical</td>
+            </tr>
+            <tr>
+                <td>sat-sun</td>
+                <td colspan="2">11:00 am - 05:00 pm</td>
+                <td>extra class</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
+
+
+
+#include <iostream>
+using namespace std;
+
+// Class to represent Lecture details
+class Lecture
+{
+private:
+    string lecturerName;
+    string subjectName;
+    string courseName;
+    int numberOfLectures;
+
+public:
+
+    // Constructor (assign initial values)
+    Lecture()
+    {
+        lecturerName = "";
+        subjectName = "";
+        courseName = "";
+        numberOfLectures = 0;
+    }
+
+    // Function to add lecture details
+    void addLectureDetails()
+    {
+        cout << "\nEnter Lecturer Name: ";
+        getline(cin, lecturerName);
+
+        cout << "Enter Subject Name: ";
+        getline(cin, subjectName);
+
+        cout << "Enter Course Name: ";
+        getline(cin, courseName);
+
+        cout << "Enter Number of Lectures: ";
+        cin >> numberOfLectures;
+        cin.ignore(); // clear buffer
+    }
+
+    // Function to display lecture details
+    void displayLectureDetails()
+    {
+        cout << "\n-----------------------------";
+        cout << "\nLecturer Name   : " << lecturerName;
+        cout << "\nSubject Name    : " << subjectName;
+        cout << "\nCourse Name     : " << courseName;
+        cout << "\nNo. of Lectures : " << numberOfLectures;
+        cout << "\n-----------------------------\n";
+    }
+};
+
+int main()
+{
+    Lecture lecturers[5];   
+
+    cout << "===== Lecture Management System =====\n";
+
+    // Add details
+    for(int i = 0; i < 5; i++)
+    {
+        cout << "\nEnter details for Lecturer " << i + 1;
+        lecturers[i].addLectureDetails();
+    }
+
+    // Display details
+    cout << "\n\n===== Displaying Lecture Details =====\n";
+
+    for(int i = 0; i < 5; i++)
+    {
+        lecturers[i].displayLectureDetails();
+    }
+
+    return 0;
+}

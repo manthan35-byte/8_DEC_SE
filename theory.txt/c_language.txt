@@ -78,13 +78,13 @@
     -> Driver Software
     -> middleware Software
     -> Programimg Software
-
 ---------------------------------------------------------- Date:- 12/12/2025 --------------------------------------------------------------------------------------------
 
 VERSION CONTROL SYSTEM : (VCS)
 
     version CONTROL system mainly track user's record 
     which can track all changes and we can go back to previous changes using of vcs 
+
 
 here we have one version control tool : git 
 
@@ -114,7 +114,6 @@ steps to configure cli git - github
     step 5 : to check your configuration is done or not 
 
             #git config --list   (you can check your name and email in that list )
-
 ----------------------------------------------------
 ==> Now, add any new repo on github 
 
@@ -862,9 +861,136 @@ void funname()
     return value;
 }
 ----------------------------------------------------------------------
-4)function without perametersm and function without return value.
+4)function with perametersm and function with return value.
 syntacx:
 void funname(perameters)
 {
     return value;
 }
+-----------------------------------------------------------------
+FILE HEANDLING ::
+
+when we create any variable it store memory in temporary format when we close program it destroy memory
+
+memory place area is ram not a hardisk
+
+int a=10;
+----------------
+but after some time if i want to access memory or value we can't access it so,at that time we have to store values or memory in hardisk area
+
+e.g. zoom Application - chat 
+
+file HEANDLING : to store value in specific file and to open this kind file and close file 
+
+there are two types of files
+
+1)text file 
+2)binary file
+-------------------------------------------------
+note : file HEANDLING which is coonected with memory location - so,it require address
+
+int a=10;
+char name[20];
+
+file *fp; here file retrive from <stdio.h> header file
+
+------------------------------------------------------------
+fopen() : to open specific file
+
+    syntax :fopen("filename","mode")
+
+fclose() : to close specific file 
+
+    syntax : fclose(fp)
+
+fprintf() : to write something
+fscanf()  : to read from file 
+
+fgets(fp) : this method accept single single character from file
+
+EOF : end of file :it is indicate that your file is end now.
+
+---------------------------------
+r:read mode
+w:write mode
+a:append mode
+
+#include<stdio.h>
+main()
+{
+	FILE *fp;//file pointer
+	
+	fp =fopen("myfile.txt","w");
+	
+	//write a content in existing file 
+	fprintf(fp,"hello welcome to my first file");
+	
+	fclose(fp);
+}------------------------------------------------
+#include<stdio.h>
+main()
+{
+	FILE *fp;//file pointer
+	
+	fp =fopen("myfile.txt","w");
+	
+	fprintf(fp,"name : C LANGUAGE DEVLOPER :\n");
+	fprintf(fp,"score :98 :\n");
+	
+	printf("file created !!");
+	
+	fclose(fp);
+}-----------------------------------
+#include<stdio.h>
+main()
+{
+	FILE *fp;//file pointer
+	
+	fp =fopen("myfile.txt","a");//use of A to add 
+	
+	if(fp == NULL)
+	{
+		printf("file not found !");
+		return 0;
+	}
+	fprintf(fp,"name : python DEVLOPER \n");
+	fprintf(fp,"score :88 :\n");
+	
+	printf("file created !!");
+	
+	fclose(fp);
+}
+------------------------------------------
+#include<stdio.h>
+main()
+{
+	FILE *fp;//file pointer
+	char ch;
+	fp =fopen("myfile.txt","r");//use of r
+	
+	while((ch=fgetc(fp)) !=EOF)
+	{
+		printf("%c",ch);
+	}
+    fclose(fp);
+}
+--------------------------------------------
+#include<stdio.h>
+main()
+{
+     FILE *fp;
+     char name[20];
+     char subject[20];
+     
+     fp=fopen("myfile2.txt","w");
+     //we accept name and subject from user and store in file
+     printf("enter name :");
+    gets(name);
+	
+	printf("enter subejct :");
+	gets(subject);
+	fprintf(fp,"name : %s\n",name); 
+    fprintf(fp,"subject : %s\n",subject);  
+    fclose(fp);
+}
+

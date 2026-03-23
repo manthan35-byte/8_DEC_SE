@@ -1,0 +1,18 @@
+h1
+        {
+            background-color: aqua;
+            color: black;
+            padding: 10px;
+            text-align: center;
+        }
+        div
+        {
+            background-color: blue;
+            color: beige;
+            padding: 20px;
+            height: 40px;
+        }
+        body
+        {
+            background-color:rgba(226, 43, 174, 0.49) ;
+        }

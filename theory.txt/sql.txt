@@ -1,0 +1,719 @@
+what is database ?
+------------------
+
+database is a collection of data.
+
+which is contain data in tabular formate.
+
+Row and Column wise we can store multiple data in single frame.
+
+Row represent single record and column represent special field name of that record.
+
+e.g 
+
+name     subject     city     pincode     (column name)
+----------------------------------------
+rakesh     mca     indore     452010      (row)
+
+
+we can store multiple records we retrive records specific condition wise
+even we can update and delete specific records condition wise.
+
+------------------------------------------------------------------------------
+sql: structure query language 
+
+using sql we can perform all database operations.
+
+1.create 
+2.read 
+3.update 
+4.dalete 
+
+
+# mysql -u root -p 
+Login with mysql cmd panel 
+
+# mysql -u root -p 
+enter password :
+
+------------------------------------------------------------------------------
+how to create database :
+
+create database <databasename>;
+
+e.g. 
+create database  8DECSE;
+
+now,next step to cheak all databases;;
+
+# show databases;
+
+now,next to remove database 
+
+# drop database <database>;
+
+e.g.
+
+drop database MYDB;
+show databases;
+
+------------------------------------------------------------------------------
+now,next select your database name which u want to workupon it 
+
+syntax :
+--> use <databasename>;
+
+e.g. 
+
+use 8DECSE;
+
+------------------------------------------------------------------------------
+table : one database can contain as many as tables 
+
+e.g. 
+
+table contain row and column 
+
+next step : table creation.
+
+syntax:
+
+create table <tablename>(
+    <column1>   <datatype>
+    <column2>   <datatype>
+    <column3>   <datatype>
+);
+
+e.g. 
+create table student 
+(
+    id int,
+    name varchar(20),
+    subject varchar(20),
+    score int,
+
+);
+
+now,next cheak table is proper created or not using describe command 
+
+syntax: #desc <tablename>;
+
+e.g. 
+-> decs student;
+
+------------------------------------------------------------------------------
+DDL : database defination language :
+
+to create structure of database and table we use ddl commands using below 
+commands we can create structure we can add ans remove fiels we can remove table 
+or we can rename it using ddl commands.
+1)create
+2)alter 
+3)drop 
+4)truncate
+5)rename 
+
+------------------------------------------------------------------------------
+-->DML : data manipulation language 
+
+1)insert
+2)update 
+3)delete 
+
+
+
+------------------------------------------------------------------------------
+DQL : data query language 
+
+1)select 
+
+------------------------------------------------------------------------------
+-->DCL : data control language :
+
+1)grant 
+2)revoke
+
+------------------------------------------------------------------------------
+-->TCL : transection control language 
+
+1)commit 
+2)rollback 
+3)savepoint
+
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+alter : alter command is most important part of DDL commands
+
+using alter command we can add,remove,modify fieldes of table.
+
+1)add 
+2)remove
+3)modify
+
+
+1) add : 
+e.g. 
+syntax : 
+alter table <tablename> <altercommand> fieldname datatype 
+
+e.g. 
+
+-->alter table student add city varchar(20);
+-->decs student;
+
+                +---------+-------------+------+-----+---------+-------+
+                | Field   | Type        | Null | Key | Default | Extra |
+                +---------+-------------+------+-----+---------+-------+
+                | id      | int         | YES  |     | NULL    |       |
+                | name    | varchar(20) | YES  |     | NULL    |       |
+                | subject | varchar(20) | YES  |     | NULL    |       |
+                | score   | int         | YES  |     | NULL    |       |
+                | city    | varchar(20) | YES  |     | NULL    |       |  
+                +---------+-------------+------+-----+---------+-------+
+
+------------------------------------------------------------------------------
+modify : 
+
+syntax : 
+alter table <tablename> modify <columanname> <datatype>;
+
+e.g.
+alter table student modify name varchar(25);
+
+->show datatypes;
+->use 8decse;
+->show tables;
+decs student ;
+alter table student modify city varchar(30);
+------------------------------------------------------------------------------
+->alter rename command : 
+
+when we want to change column name using of rename command 
+
+syntax : 
+
+alter table <tablename> rename column <columnname> to <new columnname>;
+
+e.g.
+
+->alter table student rename column score to marks;
+->decs student;
+------------------------------------------------------------------
+3)drop : to delete table or database from the memory we can use drop command 
+
+syntax : 
+
+drop table <tablename>;
+
+or 
+
+drop database <databasename>;
+
+e.g. 
+->create table dummy 
+(
+id int,
+name char(20),
+subject char(20)
+);
+
+->show tables;
+-> drop table dummy;
+->show tables;
+
+----------------------------------------------------------------------
+4) truncate :
+drop delete table and cloumn from the memory completly but using of truncate command we can remove all 
+records from the table but structure reamin same.
+
+means using of truncate we don't need to recreate table but using of 
+drop we have to create table first then re enter data.
+truncate is faster then drop.
+
+e.g.  drop : account delete 
+
+truncate  : delete order history or search history ...
+
+syntax : 
+# truncate table <tablename>;
+
+create dummy(
+    id int, 
+    name varchar(20)
+);
+
+->truncate table dummy;
+
+->show tables;
+
+----------------------------------------------------------------------------
+5) rename : when we want to change table name we use rename command 
+
+syntax : rename table <oldtablename> to <newtablename>
+
+e.g. : rename table dummy to user;
+
+--> show tables;
+
+-->note : we can also rename table name usong of alter 
+
+syntax : 
+#alter table <oldname> rename to <newname>;
+e.g. : alter table user rename to user_1;
+
+-------------------------------------------------------------------------------------------------
+
+1) insert : insert command is used to store record in exisiting table using of specific column wise.
+
+syntax : 
+insert into <tablename> (columnname1,colunname2..)
+values 
+            (values1,values2...);
+e.g. 
+      insert into student 
+      (id,name,subject)
+      values
+      (1,'man','c++');
+
+==> DQL : select : to retrive data all records from table :
+
+syntax:
+select * from student;
+
+==>store multiple records using single insert command 
+
+insert into student
+(id,name,subject)
+values
+(123,'raj','c')
+(125,'rajesh','java');
+
+-->select from * student;
+
+==> without adding columnname in command 
+=>insert into student 
+values 
+(4,'man','c_pro');
+
+========================================================================================
+===> constraints : constraints means we can prevent unwanted records in data.
+
+constraints  :
+
+1)not null 
+2)Default
+3)primary Key
+4) UNIQUE 
+5)auto_increment
+6)cheak 
+7)foreign key 
+
+
+==>  we can restrict data from outside the world.
+
+
+1)not null : when we add any filed as a not null if we want to specify specific field 
+without null we can use below syntax : 
+
+
+syntax  : 
+
+         create table <tablename>
+         (
+            fieldname datatype(size)  not null,
+            .
+            .
+            .
+         );
+
+
+e.g. 
+        there are two way of not null : 
+         1)at table creation time 
+         create table user
+         (
+            id int,
+            name varchar(20) not null
+         );
+
+         decs user;
+
+         insert into user (id) values (1);
+         ERROR 1364(HY000): FIELD 'NAME' DOSEN'T HAVE A Default VALUE 
+
+         2) after creation of table 
+           insert into user (name) values ('man');
+           alter table user modify name varchar(20) null;
+
+         
+---------------------------------------------------------------------------------------------------
+2)Default   :  when we want to define Default value to specfic column we can use Default constraints
+
+              so,by Default it will consider Default value 
+              
+              1)at create table time 
+
+              syntax  :
+                      
+                      create table <tablename>
+                      (
+                        fieldname datatype Default <Defaultvalue>
+                      );
+
+                      e.g.
+                      create table dummy
+                            (
+                            id int,
+                             name varchar(20),
+                            status varchar(20) Default "active"
+                            );
+
+                insert into dummy(id,name)
+                values 
+                (1,'man'),
+                (2,'raj');
+
+                select * from dummy;
+                +------+------+--------+
+                | id   | name | status |
+                +------+------+--------+
+                |    1 | man  | active |
+                |    2 | raj  | active |
+                +------+------+--------+
+
+
+          2)Default constraints  alter command 
+
+          alter table dummy add created_at TIMESTAMP Default CURRENT_TIMESTAMP;
+
+            select * from dummy;
+            +------+------+--------+---------------------+
+            | id   | name | status | created_at          |
+            +------+------+--------+---------------------+
+            |    1 | man  | active | 2026-03-03 10:01:13 |
+            |    2 | raj  | active | 2026-03-03 10:01:13 |
+            +------+------+--------+---------------------+
+
+
+---------------------------------------------------------------------------------------------------
+
+6) cheak : cheak is a constraints which is mainly use ti apply restrictions on specific field 
+for e.g.  emp table we can allow only more then 18 years old emply .
+
+syntax : 
+
+       fieldname cheak fieldname condition ;
+
+
+
+==>
+       
+       create table user 
+       (
+        id int primary key auto_increment,
+        name varchar(20),
+        age int cheak(age>18)
+       );
+
+       or
+
+       =>alter table user add column age int cheak (age>18);
+
+       ==>decs user;
+
+
+      => insert into user(id,name,age)
+       values
+       (1,'aaa',19);
+      
+      insert into user 
+      values 
+      (2,'bbb',5);
+      ERROR 3819 (HY000) :CHEAK constraints 'user_chk_1' is voilated.
+
+      alter table user drop column age;
+
+      alter table user add column age int;
+      
+      alter table user add constraintscheak_age cheak(age>18);
+
+     ==> add uniqe constraints name using of alter commnd 
+
+      alter table user add constraints user_pk primary key(id);
+
+      alter table user drop primary key;
+      
+==========================================================================
+inner join : inner join which is return only mathching element from the 
+both tables.
+
+insert into tbl_order (cust_id,pro_id)
+values
+(2,3),
+(7,4);
+
+select * from tbl_order;
+
+select user.u_name,tbl_order.pro_id
+from user
+inner join tbl_order
+on user.id = tbl_order.cust_id;
+
+----------------------------------------------------------------------------
+left join :  left join take all records from the left tables and 
+display matching values from  the right table 
+
+if there is no records in right it display null 
+
+
+select user.u_name,tbl_order.pro_id
+from user
+left join tbl_order
+on user,id = tbl_order.cust_id;
+
+----------------------------------------------------------------------------
+right join : fetch all records from right table and try to match with left table 
+
+select * from user
+right join tbl_order
+on user.id = tbl_order.cust_id;
+
+----------------------------------------------------------------------------
+outer join : fetch all records which is not match 
+----------------------------------------------------------------------------
+union : to cpmbine 2  Tab 
+----------------------------------------------------------------------------
+full join : fetch all matching records from left side and right side and 
+
+in simple language we can say that full join
+combination of left join and right join
+
+in mysql full join is not working 
+
+solution we can combine result of left join and  right join
+
+using of union concept
+
+
+
+============================================================================
+foreign key ::this is mostpowerful topic of constrains and sql language 
+
+using of foreign key we can build relationship between two tables 
+
+1)A parents --> K child 
+2)A parents --> J child 
+
+
+         child                     parent
+
+id    c_name     p_id            id     p_name
+1       k          1              1      A 
+2       j          1              2      B
+3       m          2              3      C
+
+==> create table parent 
+(
+  id int primary key auto_increment,
+  p_name varchar(20),
+  city varchar(20)
+);
+
+==>insert into parent
+(p_name,city)
+values 
+('A_parent','ahamdabad'),
+('B_parent','surat'),
+('C_parent','rajkot'),
+('D_parent','mumbai');
+
+----------------------------------
+CHILD table :::
+
+create table child 
+(
+  id int primary key auto_increment,
+  c_name varchar(20),
+  p_id int,
+  constraint fk_pid foreign key (p_id) references parent(id)
+  on delete cascade 
+  on update cascade
+);
+
+==>
+decs child ;
++--------+-------------+------+-----+---------+----------------+
+| Field  | Type        | Null | Key | Default | Extra          |
++--------+-------------+------+-----+---------+----------------+
+| id     | int         | NO   | PRI | NULL    | auto_increment |
+| c_name | varchar(20) | YES  |     | NULL    |                |
+| p_id   | int         | YES  | MUL | NULL    |                |
++--------+-------------+------+-----+---------+----------------+
+
+==>insert into child 
+(c_name,p_id)
+values
+('child_101',1),
+('child_102',3),
+('child_103',3);
+
+==>select * from child;
++----+-----------+------+
+| id | c_name    | p_id |
++----+-----------+------+
+|  1 | child_101 |    1 |
+|  2 | child_102 |    3 |
+|  3 | child_103 |    3 |
++----+-----------+------+
+
+==>
+select child.id,child.c_name as child_name,parent.p_name as parent_name
+from child 
+join parent
+on child.p_id = parent.id;
+
++----+------------+-------------+
+| id | child_name | parent_name |
++----+------------+-------------+
+|  1 | child_101  | A_parent    |
+|  2 | child_102  | C_parent    |
+|  3 | child_103  | C_parent    |
++----+------------+-------------+
+
+==>insert into child 
+(c_name,p_id)
+values
+('jjj',5);
+
+note : foreign key apply restrictions on invelid data input or unrelavent data 
+============================================================================================
+DCL : DATA CONTROL LANGUAGEn 
+
+using of dcl command we can restrict specfic user to perform specfic dml commands
+
+dcl commands
+
+1)grant : when we want to assign  specfic permission to specific user 
+2)revoke : retrive back permission from the specfic user.
+
+in my sql we can cheak number of users 
+
+==>select user,host from mysql.user;
++------------------+-----------+
+| user             | host      |
++------------------+-----------+
+| mysql.infoschema | localhost |
+| mysql.session    | localhost |
+| mysql.sys        | localhost |
+| root             | localhost |
++------------------+-----------+
+
+==>
+create user 'manthan'@'localhost' identified by '22000';
+
++---------------------+-----------+
+| user                | host      |
++---------------------+-----------|
+| Manthan             | localhost |
+| mysql.infoschema    | localhost |
+| mysql.session       | localhost |
+| mysql.sys           | localhost |
+| root                | localhost |
++---------------------+-----------+
+
+==>
+select * from 8decse.parent;
+
+
+===> grant :: syntax :  
+GRANT <permissionlist>
+on databasesname.tablename
+to 'username'@'host';
+
+
+==>
+grant select 
+on 8decse.parent
+to 'Manthan'@'localhost';
+
+==> now login to Manthan@localhost
+
+===>slelect * from 8decse.parent;
++----+----------+-----------+
+| id | p_name   | city      |
++----+----------+-----------+
+|  1 | A_parent | ahamdabad |
+|  2 | B_parent | surat     |
+|  3 | C_parent | rajkot    |
+|  4 | D_parent | mumbai    |
++----+----------+-----------+
+
+==>assign multiple permission
+grant insert,update 
+on 8decse.parent
+to 'Manthan'@'localhost';
+
+
+---------------------------
+revoke : : 
+revoke select 
+on 8decse.parent
+to 'Manthan'@'localhost';
+
+========================================================
+tcl : : : 
+transection control language 
+
+when we want to do some changes after execution commands we can go back to previous commands
+
+using of tcl commmands.
+
+for  e.g. we oreder something 
+product-add to cart-payment
+
+but for some reason payment is failed - at that time i want to cancel all previous transection
+at that time we use tcl 
+
+i)rollback 
+ii)commit
+iii)save point
+
+=====================================================================
+=====================================================================
+i)rollback : : :when we want to go back on strating of transcation it work like undo 
+
+
+ii)commit : : :permanent save after commit we can't do rollback 
+
+
+iii)save point : : :we can create cheakpoints and we can jump on specific cheakpoint
+
+---------------------------------------------
+
+select * from student;
++------+------+---------+
+| id   | name | subject |
++------+------+---------+
+|  124 | man  | c++     |
+|    4 | raj  | java    |
++------+------+---------+
+
+->start transaction;
+->update student set subject="AI" where id=1;
+->select * from student limit 2;
+
+->rollback;
+->select * from student;
+
+update 
+
+
+(incomplete)
+==============================================
+start transaction;
+update student set subject="ai" where id=135;
+savepoint s1;
+upadate student set subject="java" where id=123;
+select * from student;
+rollback to s1;
+commit;

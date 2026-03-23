@@ -1,0 +1,794 @@
+Introduction to SQL :::
+
+Theory Questions:
+
+1) What is SQL, and why is it essential in database management?
+
+ans : sql is a standard programing language  used to store,retrive,manage and manipulate data in database.
+
+=>why sql essential :
+
+->it helps to create and manage database and tables.
+
+->it allow users to insert,update,delete and retrive data easily.
+
+->mainly use for data accuracy and security.
+
+->it allow user to access and manage data efficiently.
+
+2)diffrence between dbms and rdbms
+
+->dbms manages data.
+->rdbms menage related data in tables.
+
+ans : 
+
+                                           meaning : 
+
+database management system                                       relational database management system
+
+                                           data storage:
+
+data store in file                                               data store in table 
+
+                                           relationship:
+no relation between table                                        table are related using keys 
+
+                                           security:
+less secure                                                      more secure
+
+                                           normalization:
+not fully support                                                support normalization
+
+                                           example:
+dbase,foxpro                                                     mysql,oracle,sql,server 
+
+
+3) Role of SQL in managing relational databases
+
+ans : SQL plays an important role in managing relational databases because it helps users interact with the database.
+
+->Main roles of SQL:
+
+Data Definition – Create and modify database structure (tables).
+
+Data Manipulation – Insert, update, and delete data.
+
+Data Querying – Retrieve specific data using queries.
+
+Access Control – Provide permissions to users.
+
+Data Integrity – Maintain accuracy and consistency of data.
+
+
+
+4) Key Features of SQL
+
+ans : Easy to learn and use
+
+SQL syntax is simple and similar to English.
+
+Data Querying:
+Allows users to retrieve data using commands like select.
+
+Data Manipulation:
+SQL can insert, update, and delete data using insert,update, delete.
+
+Data Definition:
+SQL can create or modify tables using create, alter, drop.
+
+Security and Access Control:
+SQL allows user permissions using grant and revoke.
+
+Data Integrity:
+Maintains accuracy using constraints like primary KEY, foreign KEY, unique.
+
+Standard Language:
+SQL works with many databases like MySQL, Oracle Database, and Microsoft SQL Server.
+
+2. SQL Syntax ::: 
+
+1) What are the basic components of SQL syntax?
+
+Ans:
+
+->Keywords:
+Special words with predefined meaning in SQL such as SELECT, INSERT, WHERE.
+
+->Identifiers:
+Names of database objects like table names, column names.
+
+->Operators:
+Used to perform operations like =, >, <, AND, OR.
+
+->Clauses:
+Parts of a query that define conditions and structure, such as WHERE, ORDER BY, GROUP BY.
+
+->Functions:
+Predefined operations like COUNT(), SUM(), AVG().
+
+2) Write the general structure of an SQL SELECT statement.
+
+Ans:
+
+-->SELECT column1, column2
+FROM table_name
+WHERE condition
+GROUP BY column
+HAVING condition
+ORDER BY column;
+
+Explanation:
+
+SELECT → chooses columns
+FROM → specifies table
+WHERE → filters rows
+GROUP BY → groups data
+HAVING → filters groups
+ORDER BY → sorts result
+
+3) Explain the role of clauses in SQL statements (Easy Explanation)
+
+Ans:
+
+Definition:
+Clauses are different parts of an SQL query. Each clause has its own job.
+
+Easy Understanding of Clauses:
+
+FROM Clause:
+Tells SQL which table to take data from.
+-> Example: “Data kaha se lena hai?”
+
+WHERE Clause:
+Used to filter data (apply condition).
+-> Example: “Sirf wahi data chahiye jo condition match kare”
+
+GROUP BY Clause:
+Used to group similar data together.
+-> Example: “Same values ko ek group mein rakhna”
+
+HAVING Clause:
+Used to filter grouped data.
+-> Example: “Group banne ke baad condition lagana”
+
+ORDER BY Clause:
+Used to sort data (ascending or descending).
+-> Example: “Data ko order mein arrange karna”
+
+3. SQL Constraints : :::
+
+1)What are constraints in SQL?
+
+ans : 
+
+=>Constraints are rules applied on table columns to make sure the data is correct and valid.
+
+ They help maintain data accuracy and consistency.
+
+Types of Constraints :
+
+PRIMARY KEY:
+Uniquely identifies each row in a table
+Cannot be NULL
+Example: Student ID
+
+FOREIGN KEY:
+Connects one table to another
+Ensures data exists in the parent table
+Example: student_id in marks table refers to students table
+
+NOT NULL : 
+Column cannot have empty (NULL) values
+Example: Name should not be empty
+
+UNIQUE : 
+All values must be different
+No duplicates allowed
+Example: Email ID
+
+DEFAULT : 
+Sets a default value if no value is given
+Example: status = 'active'
+
+CHECK : 
+Adds a condition for values
+Example: age must be greater than 18
+
+2) Difference between PRIMARY KEY and FOREIGN KEY
+
+Feature         	PRIMARY KEY	                   FOREIGN KEY
+
+Purpose         	Uniquely identify a row  	   Link two tables
+
+Duplicate values	Not allowed                    Allowed
+
+NULL values	        Not allowed             	   Allowed (sometimes)
+
+Table location   	Same table	                   Refers to another table
+
+Example         	student_id in students	       student_id in marks
+
+
+Simple idea:
+
+Primary Key = Identity of a row
+Foreign Key = Connection between tables
+
+3) Role of NOT NULL and UNIQUE
+
+=>NOT NULL
+Ensures a column always has a value
+Prevents empty data
+
+-> Example:
+A student must have a name
+
+=>UNIQUE
+Ensures all values are different
+Prevents duplicate data
+
+-> Example:
+Two students cannot have the same email
+
+4. Main SQL Commands and Sub-commands (DDL) :::
+
+1) Define the SQL Data Definition Language (DDL).
+
+ans : 
+
+->DDL is used to create and manage database structure.
+
+->It works on tables, columns, databases (not actual data).
+
+->Common DDL Commands:
+CREATE → Create table/database
+ALTER → Change table structure
+DROP → Delete table
+TRUNCATE → Remove all data from table
+
+2)Explain the CREATE command and its syntax.
+
+ans : 
+
+=>CREATE is used to make a new table or database.
+
+syntax :  
+=>CREATE TABLE table_name 
+(
+ ->   column1 datatype constraint,
+ ->   column2 datatype constraint,
+ ->   column3 datatype constraint
+);
+
+e.g. 
+=>CREATE TABLE students
+(
+  ->  student_id INT PRIMARY KEY,
+  ->  name VARCHAR(50) NOT NULL,
+  ->  age INT,
+  ->  email VARCHAR(100) UNIQUE
+);
+
+3) What is the purpose of specifying data types and constraints during table creation?
+
+ans : 
+
+Purpose of specifying data types and constraints ::
+
+Data Types:
+
+->Data types define the kind of values a column can store.
+
+Purpose:
+
+->Ensure data is stored in a valid format
+->Improve data integrity
+->Optimize storage and performance
+
+Examples:
+
+INT → Stores integers
+VARCHAR(50) → Stores text up to 50 characters
+DATE → Stores date values
+
+Constraints :
+
+->Constraints enforce rules on the data to maintain accuracy and consistency.
+
+Purpose:
+
+->Prevent invalid or incorrect data entry
+->Maintain data integrity
+->Ensure relationships between tables are correct
+
+Examples:
+
+PRIMARY KEY → Uniquely identifies each row
+NOT NULL → Prevents empty values
+UNIQUE → Avoids duplicate values
+FOREIGN KEY → Maintains referential integrity
+
+5. ALTER Command :::
+
+1) What is the use of the ALTER command in SQL?
+
+ans : 
+
+=>Use of the ALTER command in SQL :
+
+->The ALTER command is used to modify the structure of an existing table in a database.
+
+->It allows you to make changes without deleting the table or losing existing data (in most cases).
+
+Common uses of ALTER:
+->Add new columns
+->Modify existing columns (datatype, size, constraints)
+->Delete (drop) columns
+->Add or remove constraints
+
+=>In short, ALTER is used to update the design of a table after it has been created.
+
+2) How can you add, modify, and drop columns from a table using ALTER?
+
+ans : 
+
+=>Add a column
+
+->Used when you want to insert a new column into an existing table.
+
+syntax :
+ALTER TABLE table_name
+ADD column_name datatype;
+
+e.g.
+ALTER TABLE students
+ADD age INT;
+
+=>Modify a column
+
+->Used to change the datatype or size of an existing column.
+
+syntax : 
+ALTER TABLE table_name
+MODIFY column_name new_datatype;
+
+e.g.
+ALTER TABLE students
+MODIFY name VARCHAR(20);
+
+=>Drop a column
+
+->Used to remove a column from a table.
+
+syntax : 
+ALTER TABLE table_name
+DROP COLUMN column_name;
+
+e.g.
+ALTER TABLE students
+DROP COLUMN age;
+
+ALTER → Used to change table structure
+ADD → Adds a new column
+MODIFY → Changes column datatype/size
+DROP COLUMN → Deletes a column
+
+6. DROP Command :::
+
+1)What is the function of the DROP command in SQL?
+
+ans : 
+
+=>The DROP command is used to permanently delete a database object such as a table, database, or view.
+
+->When you use DROP, both the structure and the data inside it are completely removed.
+
+syntax : 
+DROP TABLE table_name;
+
+e.g.
+DROP TABLE students;
+
+2) What are the implications of dropping a table from a database?
+
+ans : 
+
+1. Data is permanently lost
+->All records in the table are deleted
+->Cannot be recovered easily
+
+2. Table structure is removed
+->Columns, data types, and constraints are deleted
+->The table no longer exists in the database
+
+3. Dependent objects may be affected
+->If other tables use FOREIGN KEY references, errors may occur
+->Views, indexes, or procedures depending on the table may break
+
+4. Cannot perform operations on it anymore
+->You cannot run SELECT, INSERT, UPDATE, etc.
+->You must recreate the table if needed
+
+7. Data Manipulation Language (DML) :::
+
+1) Define the INSERT, UPDATE, and DELETE commands in SQL.
+
+ans : 
+
+=>INSERT
+
+->The INSERT command is used to add new records (rows) into a table.
+
+syntax :
+INSERT INTO table_name (column1, column2, ...)
+VALUES (value1, value2, ...);
+
+e.g.
+INSERT INTO students (id, name, age)
+VALUES (1, 'Rahul', 20);
+
+=>UPDATE :
+
+->The UPDATE command is used to modify existing data in a table.
+
+syntax: 
+UPDATE table_name
+SET column1 = value1, column2 = value2
+WHERE condition;
+
+e.g.
+UPDATE students SET age = 21 WHERE id = 1;
+ 
+=>DELETE:
+
+->The DELETE command is used to remove records (rows) from a table.
+
+syntax :
+DELETE FROM table_name WHERE condition;
+
+e.g.
+DELETE FROM students WHERE id = 1;
+
+2) What is the importance of the WHERE clause in UPDATE and DELETE operations
+
+ans : 
+
+=>The WHERE clause is used to specify which rows should be affected.
+
+Why it is important:
+
+1. Prevents unwanted changes :
+->Without WHERE, all rows are affected
+* UPDATE students SET age = 25; 
+
+2. Targets specific records :
+->Helps update/delete only required data
+* UPDATE students SET age = 25 WHERE id = 2; 
+
+3. Avoids data loss :
+->In DELETE, missing WHERE removes all records
+* DELETE FROM students; 
+
+8. Data Query Language (DQL) :::
+
+1) What is the SELECT statement, and how is it used to query data?
+
+ans : 
+
+=>The SELECT statement is used to retrieve data from a database table.
+
+It allows you to view specific columns or all columns from one or more tables.
+
+syntax :
+SELECT * FROM students;
+
+about fix colum :
+SELECT column1, column2, ...
+FROM table_name;
+
+e.g:
+SELECT name, age
+FROM students;
+
+
+2) Explain the use of the ORDER BY and WHERE clauses in SQL queries.
+
+ans : 
+
+=>ORDER BY Clause
+
+->The ORDER BY clause is used to sort the result in ascending or descending order.
+
+->Default is ascending (ASC).
+
+Syntax:
+
+SELECT column1
+FROM table_name
+ORDER BY column1 ASC|DESC;
+
+Example:
+
+SELECT * 
+FROM students
+ORDER BY age DESC;
+
+=>The WHERE clause is used to filter data based on conditions.
+
+-> It returns only those rows that satisfy the condition.
+
+Syntax:
+
+SELECT column1, column2
+FROM table_name
+WHERE condition;
+
+Example:
+
+SELECT * 
+FROM students
+WHERE age > 18;
+Only students with age greater than 18 will be shown.
+
+9. Data Control Language (DCL) :::
+
+1) What is the purpose of GRANT and REVOKE in SQL?
+
+ans : 
+
+=>GRANT and REVOKE are used to control access to database objects such as tables, views, and procedures. They belong to Data Control Language (DCL).
+
+GRANT → Used to give permissions to users
+we can single and multiple permissions using grant to users  
+
+
+REVOKE → Used to remove permissions from users
+we can remove multiple or single permissions using revoke from users
+
+These commands ensure that only authorized users can perform specific operations on the database.
+
+
+2) How do you manage privileges using these commands?
+
+ans :
+
+=>Privileges are managed by assigning and withdrawing permissions based on user requirements.
+
+->Granting privileges
+
+->You can give one or more permissions to a user:
+GRANT privilege_name
+ON table_name
+TO user_name;
+
+->Example:
+
+GRANT SELECT, INSERT
+ON students
+TO user1;
+
+->Granting all privileges : 
+GRANT ALL
+ON students
+TO user1;
+
+->Revoking privileges :
+
+To remove specific permissions:
+REVOKE privilege_name
+ON table_name
+FROM user_name;
+
+->Example:
+
+REVOKE INSERT
+ON students
+FROM user1;
+
+->Revoking all privileges
+REVOKE ALL
+ON students
+FROM user1;
+
+Key Points ::
+->GRANT gives access, REVOKE removes access
+->Controls what users can do (SELECT, INSERT, UPDATE, DELETE)
+->Helps maintain database security
+->Used in multi-user environments
+
+10. Transaction Control Language (TCL) :::
+
+1) What is the purpose of the COMMIT and ROLLBACK commands in SQL?
+
+ans : 
+
+=>COMMIT and ROLLBACK are part of Transaction Control Language (TCL).
+They are used to manage transactions in a database.
+
+COMMIT :
+
+->The COMMIT command is used to save all changes permanently in the database.
+
+->Once committed, changes cannot be undone
+->Makes changes visible to other users
+
+Example:
+
+COMMIT;
+After this, all INSERT, UPDATE, DELETE operations are permanently stored.
+
+ROLLBACK : 
+
+->The ROLLBACK command is used to undo changes made in a transaction.
+
+->Restores the database to the last committed state
+->Useful when an error occurs
+
+Example:
+
+ROLLBACK;
+All changes after the last COMMIT are canceled.
+
+
+
+
+
+2) Explain how transactions are managed in SQL databases.
+
+ans :Explanation of how transactions are managed.
+
+=>e.g:
+
+Start Transaction;
+
+UPDATE accounts SET balance = balance - 100 WHERE id = 1;
+UPDATE accounts SET balance = balance + 100 WHERE id = 2;
+
+-> 
+end of transactions :
+1->COMMIT;
+
+2->ROLLBACK;
+
+11. SQL Joins :::
+
+1) Explain the concept of JOIN in SQL. What is the difference between INNER JOIN, LEFT JOIN, RIGHT JOIN, and FULL OUTER JOIN?
+
+ans : 
+
+=>A JOIN is used to combine data from two or more tables based on a related column.
+
+->It helps retrieve meaningful information that is spread in  multiple tables.
+
+1. INNER JOIN
+->Returns only the matching records from both tables
+->If no match → row is not included
+
+Example idea:
+Only students who have marks will be shown.
+
+2. LEFT JOIN (LEFT OUTER JOIN)
+->Returns all records from the left table
+->Matching records from the right table
+->If no match → NULL values for right table
+
+Example idea:
+All students are shown, even if they don’t have marks.
+
+3. RIGHT JOIN (RIGHT OUTER JOIN)
+->Returns all records from the right table
+->Matching records from the left table
+->If no match → NULL values for left table
+
+Example idea:
+All marks are shown, even if student details are missing.
+
+4. FULL OUTER JOIN
+->Returns all records from both tables
+->Matching where possible
+->Non-matching rows filled with NULL
+
+Example idea:
+Shows everything from both tables.
+
+JOIN Type	        Result
+INNER JOIN	        Only matching rows
+LEFT JOIN	        All left + matching right
+RIGHT JOIN	        All right + matching left
+FULL OUTER JOIN	    All rows from both tables
+
+2) How are joins used to combine data from multiple tables?
+
+ans : 
+
+=>Joins work by using a common column (like id) in both tables.
+
+e.g:
+
+->SELECT columns FROM table1 JOIN table2 ON table1.common_column = table2.common_column;
+
+Example:
+
+Table: students
+
+id	   name
+1	   Rahul
+2	   Aman
+
+Table:    marks
+
+id	      marks
+1	      90
+
+e.g:
+
+->SELECT students.name, marks.marks FROM students INNER JOIN marks ON students.id = marks.id;
+
+Result:
+name	marks
+Rahul	90
+
+-> Only matching id = 1 is shown.
+
+12. SQL Group By :::
+
+1) What is the GROUP BY clause in SQL? How is it used with aggregate functions?
+
+ans :
+
+=>The GROUP BY clause is used to group rows that have the same values in specified columns.
+
+It is mainly used with aggregate functions to perform calculations on each group instead of the whole table.
+
+Common Aggregate Functions
+COUNT() → counts rows
+SUM() → total value
+AVG() → average
+MAX() → highest value
+MIN() → lowest value
+
+=>Syntax:
+->SELECT column_name, aggregate_function(column_name) FROM table_name GROUP BY column_name;
+
+Example:
+
+Table:   students
+
+class	 marks
+A	     80
+A	     90
+B	     70
+
+e.g:
+
+->SELECT class, AVG(marks) FROM students GROUP BY class;
+
+2) Explain the difference between GROUP BY and ORDER BY.
+
+ans :
+
+=>Difference between GROUP BY and ORDER BY :
+Feature	       GROUP BY	                      ORDER BY
+Purpose	       Groups rows	                  Sorts rows
+Use            With aggregate functions	      For arranging results
+Output	       Reduces rows 	              Keeps all rows
+Operation	   Happens before sorting	      Happens at the end
+
+->Example for ORDER BY:
+SELECT * FROM students ORDER BY marks DESC;
+
+->Sorts students by marks (highest to lowest)
+
+->Example of GROUP BY :
+
+Table: orders
+customer_name	amount
+Rahul	        500
+Aman	        300
+Rahul	        700
+Aman	        200
+Neha	        400
+
+-->SELECT customer_name, SUM(amount) AS total_amount FROM orders GROUP BY customer_name;
+

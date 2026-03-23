@@ -1,0 +1,97 @@
+css ::: CASECADING STYLE SHEET 
+
+there are 3 ways to apply css in html web pages 
+
+1)inline css :
+2)internal css :    
+3)external css :
+
+--------------------------------------------------
+1)inline css :apply css on specific element 
+
+syntax ::
+        
+        <h1 style="properties:value">context</h1>
+     
+--------------------------------------------------
+2)internal css :it is apply on specific web pages 
+
+<style>... css goes here ...</style>
+
+--------------------------------------------------
+3)external css :this is usefull for whole projects
+
+we can apply external css on full web page 
+create external css web page and connect with 
+
+<link> element 
+
+--------------------------------------------------
+selector ::
+
+1)element selector :apply css element wise 
+
+e.g.
+
+h1
+{
+    properties : value
+    .
+}
+
+--------------------------------------------------
+2)group selector :to apply same style same css on specific group of elements
+
+e.g.
+
+h1,h3 
+{
+    properties : value
+    .
+}
+
+--------------------------------------------------
+3)class selector :to apply specific class on specific element
+
+class selector denoted by . operator
+
+e.g.
+
+.myclass
+{
+   
+}
+
+--------------------------------------------------
+4)id selector :to represent unique style for specific element we can use 
+               id selector
+
+id selector represent by #
+
+e.g.
+
+#myid
+{
+   properties : value
+}
+
+--------------------------------------------------
+5)universal selector :
+
+*
+{
+    
+}
+
+--------------------------------------------------
+division tag ::div is most powerful element of html
+
+which is represent by <div> tag 
+
+syntax :
+
+<div> ... </div>
+
+each div tag start from new block 
+
+which is mainly use to create block on specific web page
