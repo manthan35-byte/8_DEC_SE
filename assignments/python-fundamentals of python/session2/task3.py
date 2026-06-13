@@ -1,9 +1,12 @@
-restaurant_name = "Eat Punjab"
-cuisine_type = "North Indian"
-average_cost = 500
-is_open_now = True
+playlist_title = "My Favorite Songs"
+number_of_songs = 25
+is_public = True
 
-print("Restaurant Name:", restaurant_name)
-print("Cuisine Type:", cuisine_type)
-print("Average Cost:", average_cost)
-print("Is Open Now:", is_open_now)
+print("Playlist Title:", playlist_title)
+print("Memory Address:", id(playlist_title))
+
+print("Number of Songs:", number_of_songs)
+print("Memory Address:", id(number_of_songs))
+
+print("Is Public:", is_public)
+print("Memory Address:", id(is_public))

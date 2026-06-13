@@ -1,12 +1,14 @@
-playlist_title = "My Favorite Songs"
-number_of_songs = 25
-is_public = True
+title = "Python Tutorial"
+views = 150000
+likes = 12000
+premium = False
 
-print("Playlist Title:", playlist_title)
-print("Memory Address:", id(playlist_title))
+print(title)
+print(views)
+print(likes)
+print(premium)
 
-print("Number of Songs:", number_of_songs)
-print("Memory Address:", id(number_of_songs))
-
-print("Is Public:", is_public)
-print("Memory Address:", id(is_public))
+# title is a primitive data type because it is a string (str).
+# views is a primitive data type because it is an integer (int).
+# likes is a primitive data type because it is an integer (int).
+# is_premium is a primitive data type because it is a boolean (bool).
