@@ -1,0 +1,40 @@
+Task 5: Difference Between Python, C, and Java Execution.
+
+Python:
+Python runs code line by line using an interpreter. You can write the code and run it directly without compiling it first.
+
+Example:
+
+print("Hello")
+
+Process:
+
+Python Code → Interpreter → Output
+
+C:
+C first converts the entire program into machine code using a compiler. After that, the computer runs the compiled program.
+
+Example:
+
+printf("Hello");
+
+Process:
+
+C Code → Compiler → Executable File → Output
+
+Java:
+Java first compiles the code into bytecode. Then the JVM (Java Virtual Machine) runs the bytecode.
+
+Example:
+
+System.out.println("Hello");
+
+Process:
+
+Java Code → Compiler → Bytecode → JVM → Output
+
+Simple Difference :
+
+->Python: Run directly using an interpreter.
+->C: Compile first, then run.
+->Java: Compile to bytecode, then run using JVM.
