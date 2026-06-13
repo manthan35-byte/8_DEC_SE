@@ -1,4 +1,4 @@
-i=11
-while i >= 2:
-    i=i-1
+i=0
+while i <= 9:
+    i=i+1
     print(i)

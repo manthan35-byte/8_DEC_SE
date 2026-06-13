@@ -24,7 +24,8 @@ print("TASK:4 ==USE OF REMOVE===",my_apps)
 my_apps.pop()
 
 print("TASK:4 ===USE OF POP===",my_apps)
-
+ 
+#TASK = 5
 my_apps.sort()
 print("Sorted List:", my_apps)
 
