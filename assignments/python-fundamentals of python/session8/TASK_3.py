@@ -1,10 +1,11 @@
-def reverse_message(message):
-    reversed_text = ""
+def r_message(message):
+    reverse = ""
 
     for i in range(len(message) - 1, -1, -1):
-        reversed_text += message[i]
+        reverse = reverse + message[i]
 
-    return reversed_text
+    return reverse
 
-# Test
-print(reverse_message("WhatsApp"))
+msg = input("Enter a message: ")
+
+print("Reversed Message:", r_message(msg))
