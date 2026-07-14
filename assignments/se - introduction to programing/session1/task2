@@ -1,0 +1,5 @@
+1. **c++** – Usually **compiled** (it is compiled when source file is complete).
+
+2. **Python** – Usually **interpreted** (is execute code line by line).
+
+3. **JavaScript** – Can be **both** (it is mainly interpreted, but modern JavaScript engines also use compilation techniques to improve speed).
