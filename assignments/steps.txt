@@ -1,0 +1,81 @@
+STEPS :: 
+
+pip : python index package
+
+# pip install virtualenv 
+
+# python -m venv myenv
+
+
+# Scripts\activate
+
+# cd ..
+
+# pip install django
+
+# django-admin startproject myproject
+
+# cd myproject (c d : change directory)
+
+# python manage.py startapp myapp
+## python manage.py startapp driverapp
+
+# python manage.py runserver
+
+=====================================
+RE OPEN EXISTING project
+=====================================
+
+# Scripts\activate
+
+# cd ..
+
+# cd myproject
+
+# python manage.py runserver 
+
+======================================
+
+whenever we apply changes in database
+
+perform below command
+
+# python manage.py makemigrations
+# python manage.py migrate   
+
+======================================
+
+now create admin panel 
+
+# python manage.py createsuperuser
+
+username : admin
+email    : admin@gmail.com
+password : 123456
+Password:
+Password (again):
+This password is too short. It must contain at least 8 characters.
+This password is too common.
+This password is entirely numeric.
+Bypass password validation and create user anyway? [y/N]: y
+Superuser created successfully.
+
+======================================
+
+change admin password
+
+#python manage.py changepassword nisarg
+
+======================================
+
+======================================
+
+there  are multi types of database are available
+
+1) sqlite3 : light weight database which is manily use for small level of application
+
+            django by default use sqlite3data base
+
+2) mysqlclint : we have to saperate connect databse with mysql client 
+
+3)postgresql : higher level most secure database
